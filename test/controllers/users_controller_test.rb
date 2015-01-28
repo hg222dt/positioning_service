@@ -6,4 +6,9 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "Should not save without name or email" do
+  	u = User.new
+  	assert_not u.save
+  end
+
 end
