@@ -1,9 +1,23 @@
 <h1>Users#index</h1>
 
-<h3>Hej</h3>
-<ul>
-	<% @users.each do |u| %>
-	<li><%= u.email %> </li>
-	<li><%= u.authkey %> </li>
-	<% end%>
-</ul>
+<h3>Logga in</h3>
+
+<%= form_tag("/login", method: "post") do %>
+
+	<div class ="text_field">
+		<%= label_tag(:email, "E-mail: ") %>
+		<%= email_field_tag(:email) %>
+	</div>
+
+	<div class ="text_field">
+		<%= label_tag(:password, "Password")  %>
+		<%= password_field_tag(:password) %>
+	</div>
+
+	<div class="select">
+		<%= submit_tag("Logga in") %>
+	</div>
+
+	<%= link_to "Register", new_user_path %>
+
+<% end %>

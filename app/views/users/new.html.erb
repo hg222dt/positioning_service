@@ -1,3 +1,17 @@
+<% if @user.errors.any? %>
+
+	<div id='error_message'>
+		<h3>Du har gjort något fel</h3>
+
+		<ul>
+			<% @user.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+<% end %>
+
+
+
 <h1>Registrera användare</h1>
 
 
@@ -9,13 +23,13 @@
 	</div>
 
 	<div class ="text_field">
-		<%= f.label :passwod %>
-		<%= f.text_field :password %>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
 	</div>
 
 	<div class ="text_field">
-		<label for='repeatPassword'>Repeat Password</label>
-		<input name='repeatPassword' type='text'>
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
 	</div>
 
 	<div class ="text_field">
