@@ -8,5 +8,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-u1 = User.create(:firstname =>"Henrik" :email => "Henrik@Henrik.se")
-u1 = User.create(:firstname =>"Henrietta" :email => "Henrietta@Henrietta.se")
+User.delete_all
+u1 = User.create(:email => "Henrik@Henrik.se")
+u1 = User.create(:email => "Henrietta@Henrietta.se")
