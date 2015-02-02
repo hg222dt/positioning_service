@@ -39,7 +39,8 @@ class UsersController < ApplicationController
   end
 
   def logout
-
+    session[:userid] = nil
+    redirect_to root_path, :notice => "logged out"
   end
 
 
