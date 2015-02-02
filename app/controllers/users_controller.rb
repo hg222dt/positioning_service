@@ -26,6 +26,23 @@ class UsersController < ApplicationController
   	end
   end
 
+  #Inloggningsmetoder
+  def login
+    u = User.find_by_email(params[:email])
+    if u && u.authenticate(params[:password])
+      session[:userid] = u.id
+      redirect_to apikey_path
+    else
+      flash[:notice] = "Failed"
+      redirect_to root_path
+    end
+  end
+
+  def logout
+
+  end
+
+
   private
 
   def user_params

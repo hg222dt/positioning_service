@@ -23,6 +23,9 @@ Rails.application.routes.draw do
 
      get 'apikeys' => 'apikeys#show', as: :apikey
 
+    post  'login'   =>  'users#login',  :as  => "login"
+    get   'logout'  =>  'users#logout', as: :logout
+
   # Example resource route with options:
   #   resources :products do
   #     member do
