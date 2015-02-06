@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin_login/index'
+
   get 'users/index'
 
   get 'user/index'
@@ -21,10 +23,16 @@ Rails.application.routes.draw do
      #resources :register
      resources :users 
 
-     get 'apikeys' => 'apikeys#show', as: :apikey
+    get 'apikeys' => 'apikeys#show', as: :apikey
+    get 'admin_page' => 'users#admin_page', as: :admin_page
+
+    get 'admin_login_page' => 'users#admin_login_page', as: :admin_login_page
 
     post  'login'   =>  'users#login',  :as  => "login"
+    post  'admin_login'   =>  'users#admin_login',  :as  => "admin_login"
     get   'logout'  =>  'users#logout', as: :logout
+
+    get   'revoke_key'  =>  'users#revoke_key', as: :revoke_key
 
   # Example resource route with options:
   #   resources :products do

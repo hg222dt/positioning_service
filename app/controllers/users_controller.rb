@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   	@apiKey = 1111
 
+    @user.is_user_admin = true;
   	@user.authkey = @apiKey
 
 
@@ -26,10 +27,16 @@ class UsersController < ApplicationController
   	end
   end
 
+  def delete
+
+    User.find(session[:userid]).destroy
+
+  end
+
   #Inloggningsmetoder
   def login
     u = User.find_by_email(params[:email])
-    if u && u.authenticate(params[:password])
+    if u && !u.is_user_admin && u.authenticate(params[:password])
       session[:userid] = u.id
       redirect_to apikey_path
     else
@@ -38,9 +45,37 @@ class UsersController < ApplicationController
     end
   end
 
+  def admin_login_page
+    @user = User.new
+  end
+
+
+  def admin_login
+    u = User.find_by_email(params[:email])
+    if u && u.is_user_admin && u.authenticate(params[:password])
+      session[:userid] = u.id
+      redirect_to admin_page_path
+    else
+      flash[:notice] = "Failed"
+      redirect_to root_path
+    end
+  end
+
+  def admin_page
+
+  end
+
+
   def logout
     session[:userid] = nil
     redirect_to root_path, :notice => "logged out"
+  end
+
+  def revoke_key
+
+    delete()
+
+    redirect_to logout_path
   end
 
 

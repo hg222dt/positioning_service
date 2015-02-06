@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150128160356) do
     t.string   "webbsite_url"
     t.string   "website_name"
     t.string   "authkey"
+    t.boolean  "is_user_admin"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
