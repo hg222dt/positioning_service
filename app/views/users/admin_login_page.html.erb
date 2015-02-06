@@ -1,0 +1,27 @@
+<% if flash[:notice] %>
+<div class="notice">
+	<%= flash[:notice] %>
+</div>
+<% end %>
+
+<h1>Users#admin_login</h1>
+
+<h3>Administratörslogin</h3>
+
+<%= form_tag(admin_login_path, method: "post") do %>
+
+	<div class ="text_field">
+		<%= label_tag(:email, "E-mail: ") %>
+		<%= email_field_tag(:email) %>
+	</div>
+
+	<div class ="text_field">
+		<%= label_tag(:password, "Password")  %>
+		<%= password_field_tag(:password) %>
+	</div>
+
+	<div class="select">
+		<%= submit_tag("Logga in") %>
+	</div>
+
+<% end %>
