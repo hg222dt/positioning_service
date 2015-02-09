@@ -1,8 +1,12 @@
 <h1>Apikeys</h1>
 
-....===::...
-
-<%= @user.authkey %>
+<% if @user.authkey != nil %>
+	<%= @user.authkey %>
+<% else %>
+	Din api-nyckel är borttagen av administratören. Mejla janne_Banan63@hotmail.de för frågor.
+<% end %>
 <%= link_to "Logga ut!", logout_path %>
-<%= link_to "Ta bort nyckel (konto kommer att tas bort)", revoke_key_path %>
 
+<% if @user.authkey != nil %>
+<%= link_to "Ta bort nyckel (konto kommer att tas bort)", revoke_key_path %>
+<% end %>

@@ -6,4 +6,8 @@ class ApikeysController < ApplicationController
 		@user = User.find(session[:userid])
 	end
 
+	def admin_page
+    	@users = User.all
+  	end
+
 end

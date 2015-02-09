@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   def index
   	@user = User.new
-
-
-
   end
 
   def new
@@ -51,6 +48,7 @@ class UsersController < ApplicationController
 
 
   def admin_login
+    
     u = User.find_by_email(params[:email])
     if u && u.is_user_admin && u.authenticate(params[:password])
       session[:userid] = u.id
@@ -61,9 +59,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def admin_page
-    @users = User.all
-  end
+  # def admin_page
+  #   @users = User.all
+  # end
 
 
   def logout

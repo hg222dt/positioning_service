@@ -24,7 +24,7 @@ Rails.application.routes.draw do
      resources :users 
 
     get 'apikeys' => 'apikeys#show', as: :apikey
-    get 'admin_page' => 'users#admin_page', as: :admin_page
+    get 'admin_page' => 'apikeys#admin_page', as: :admin_page
 
     get 'admin_login_page' => 'users#admin_login_page', as: :admin_login_page
 
