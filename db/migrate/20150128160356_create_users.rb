@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :website_name
       t.string :authkey
       t.boolean :is_user_admin
+      t.boolean :admin_revoked_key
       t.timestamps
     end
   end

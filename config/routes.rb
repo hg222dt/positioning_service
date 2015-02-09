@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
     get   'revoke_key'  =>  'users#revoke_key', as: :revoke_key
 
+    get   'admin_revoke_key/(:user)'  =>  'users#admin_revoke_key', as: :admin_revoke_key
+
   # Example resource route with options:
   #   resources :products do
   #     member do

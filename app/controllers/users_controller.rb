@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   	@apiKey = 1111
 
-    @user.is_user_admin = true;
+    # @user.is_user_admin = true;
   	@user.authkey = @apiKey
 
 
@@ -78,12 +78,23 @@ class UsersController < ApplicationController
     redirect_to logout_path
   end
 
+  def admin_revoke_key
+    @user = User.find(params[:user])
+    @user.authkey = nil;
+    @user.admin_revoked_key = true;
+    @user.save
+    redirect_to admin_page_path
+  end
+
 
   private
 
   def user_params
     params.require(:user).permit(:email, :webbsite_url, :website_name, :password, :password_confirmation)
   end
+
+
+  
 
 
 end

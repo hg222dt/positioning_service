@@ -2,6 +2,9 @@ hejhej admin
 
 <ul>
 <% @users.each do |user| %>
-	<li><%= user.email %></li>
+	<li><%= user.email %>
+	Auth Key: <%= user.authkey %>
+	<%= link_to " Ta bort nyckel", admin_revoke_key_path(:user => user) %>
+	</li>
 <% end %>
 </ul>
