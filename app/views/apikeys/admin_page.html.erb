@@ -6,7 +6,9 @@ hejhej admin
 
 	<li><%= user.email %>
 	Auth Key: <%= user.authkey %>
+	<% if user.authkey %>
 	<%= link_to " Ta bort nyckel", admin_revoke_key_path(:user => user) %>
+	<% end %>
 	</li>
 
 	<% end %>
