@@ -16861,6 +16861,7 @@ Started GET "/" for ::1 at 2015-02-10 12:23:23 +0100
 Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 54ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for ::1 at 2015-02-10 12:31:33 +0100
@@ -21037,3 +21038,5 @@ Started GET "/" for ::1 at 2015-02-10 19:14:09 +0100
 Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 164ms (Views: 163.3ms | ActiveRecord: 0.0ms)
+=======
+>>>>>>> 8b76fbedd6af8e31490ff77b7e25b2abc50d6603

@@ -1,9 +1,18 @@
 
 <%= link_to "Logga ut!", logout_path %>
 
+<<<<<<< HEAD
 <div class='center jumbotron'>
 	<h3>Hejhej admin. Banna fett mycket användare!</h3>
 </div>
+=======
+	<li><%= user.email %>
+	Auth Key: <%= user.authkey %>
+	<% if user.authkey %>
+	<%= link_to " Ta bort nyckel", admin_revoke_key_path(:user => user) %>
+	<% end %>
+	</li>
+>>>>>>> 8b76fbedd6af8e31490ff77b7e25b2abc50d6603
 
 <div class='row'>
 	<div class='col-md-6 col-md-offset-3'>
