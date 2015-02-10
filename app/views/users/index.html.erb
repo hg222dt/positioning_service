@@ -4,26 +4,26 @@
 </div>
 <% end %>
 
-<h1>Users#index</h1>
+<div class='center jumbotron'>
+	<h3>Logga in</h3>
+</div>
 
-<h3>Logga in</h3>
+<div class='row'>
+	<div class='col-md-6 col-md-offset-3'>
+		<%= form_tag(login_path, method: "post") do %>
+			<div class ="text_field">
+				<%= label_tag(:email, "E-mail: ") %>
+				<%= email_field_tag(:email, nil, class: 'form-control') %>
+			</div>
+			<div class ="text_field">
+				<%= label_tag(:password, "Password")  %>
+				<%= password_field_tag(:password, nil, class: 'form-control') %>
+			</div>
+			<div class="select">
+				<%= submit_tag("Logga in", class: 'btn btn-primary') %>
+			</div>
 
-<%= form_tag(login_path, method: "post") do %>
-
-	<div class ="text_field">
-		<%= label_tag(:email, "E-mail: ") %>
-		<%= email_field_tag(:email) %>
+			<%= link_to "Register", new_user_path %>
+		<% end %>
 	</div>
-
-	<div class ="text_field">
-		<%= label_tag(:password, "Password")  %>
-		<%= password_field_tag(:password) %>
-	</div>
-
-	<div class="select">
-		<%= submit_tag("Logga in") %>
-	</div>
-
-	<%= link_to "Register", new_user_path %>
-
-<% end %>
+</div>
