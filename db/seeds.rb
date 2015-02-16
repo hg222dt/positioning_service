@@ -9,4 +9,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.delete_all
-u1 = User.create(:email => "Henrietta@Henrietta.se", :password_digest => "testPassword")
+u1 = User.create(email: "admin@admin.se", password: "hejhej", password_confirmation: "hejhej", webbsite_url: "www.hejhej.se", website_name: "hejhej-siten", is_user_admin: true)
