@@ -6,7 +6,7 @@ class AdminLoginController < ApplicationController
       session[:userid] = u.id
       redirect_to admin_login_path
     else
-      flash[:notice] = "Failed"
+      flash[:notice] = "Inloggningen misslyckades."
       redirect_to root_path
     end
   end

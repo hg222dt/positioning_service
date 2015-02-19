@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+ class UsersController < ApplicationController
   def index
   	@user = User.new
   end
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
       session[:userid] = u.id
       redirect_to apikey_path
     else
-      flash[:notice] = "Failed"
+      flash[:notice] = "Inloggningen misslyckades."
       redirect_to root_path
     end
   end
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
       session[:userid] = u.id
       redirect_to admin_page_path
     else
-      flash[:notice] = "Failed"
+      flash[:notice] = "Inloggningen misslyckades."
       redirect_to root_path
     end
   end
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
 
   def logout
     session[:userid] = nil
-    redirect_to root_path, :notice => "logged out"
+    redirect_to root_path, :notice => "Du är utloggad!"
   end
 
   def revoke_key
