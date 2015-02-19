@@ -29,12 +29,15 @@ Rails.application.routes.draw do
     get 'admin_login_page' => 'users#admin_login_page', as: :admin_login_page
 
     post  'login'   =>  'users#login',  :as  => "login"
+    get  'user_root'   =>  'apikeys#show',  :as  => "user_root"
     post  'admin_login'   =>  'users#admin_login',  :as  => "admin_login"
     get   'logout'  =>  'users#logout', as: :logout
 
     get   'revoke_key'  =>  'users#revoke_key', as: :revoke_key
 
-    get   'admin_revoke_key/(:user)'  =>  'users#admin_revoke_key', as: :admin_revoke_key
+    get   'generate_access_token' => 'users#generate_access_token', as: :generate_access_token
+
+    get   'admin_revoke_key/(:user)'  =>  'admin_login#admin_revoke_key', as: :admin_revoke_key
 
   # Example resource route with options:
   #   resources :products do
