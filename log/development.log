@@ -30224,3 +30224,85 @@ Processing by Api::DoodlesController#show as HTML
   Parameters: {"id"=>"1"}
   [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-23 13:32:48 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"hej svejs igen!"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "hej svejs igen!"], ["created_at", "2015-02-23 12:32:48.978858"], ["updated_at", "2015-02-23 12:32:48.978858"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 52ms
+
+NoMethodError (undefined method `doodle_url' for #<Api::DoodlesController:0x007fc9ad6d9c40>):
+  app/controllers/api/doodles_controller.rb:13:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (53.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (84.5ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-23 13:33:49 +0100
+Processing by Api::DoodlesController#index as JSON
+  [1m[36mDoodle Load (0.4ms)[0m  [1mSELECT "doodles".* FROM "doodles"[0m
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-23 13:34:11 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"hej svejs igen igen!"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "hej svejs igen igen!"], ["created_at", "2015-02-23 12:34:11.266491"], ["updated_at", "2015-02-23 12:34:11.266491"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `doodle_url' for #<Api::DoodlesController:0x007fc9b00dd3c0>):
+  app/controllers/api/doodles_controller.rb:13:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-23 13:35:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT "doodles".* FROM "doodles"
+Completed 200 OK in 34ms (Views: 8.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-23 13:46:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"tjabba tjabba!"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "tjabba tjabba!"], ["created_at", "2015-02-23 12:46:00.479469"], ["updated_at", "2015-02-23 12:46:00.479469"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 500 Internal Server Error in 61ms
+
+NoMethodError (undefined method `api_v1_doodle_url' for #<Api::DoodlesController:0x007f915bdd68e8>):
+  app/controllers/api/doodles_controller.rb:14:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (52.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (84.7ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-23 13:46:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"lollson!"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "lollson!"], ["created_at", "2015-02-23 12:46:41.705860"], ["updated_at", "2015-02-23 12:46:41.705860"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Completed 201 Created in 43ms (Views: 1.9ms | ActiveRecord: 2.4ms)

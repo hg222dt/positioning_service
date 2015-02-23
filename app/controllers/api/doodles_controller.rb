@@ -10,7 +10,8 @@ module Api
 	  def create
 	  	@doodle = Doodle.new(doodle_post_params)    # using strong parameters
 	  	@doodle.save
-	  	respond_with @doodle
+	  	# respond_with @doodle
+	  	respond_with :api, @doodle
 	  end
 
 	  def show
@@ -25,8 +26,5 @@ module Api
 			params.require(:doodle).permit(:doodle_text)
 	  end
 
-	  def doodle_get_by_id_params
-			params.require(:doodle).permit(:id)
-	  end
 	end
 end
