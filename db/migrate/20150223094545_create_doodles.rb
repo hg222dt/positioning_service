@@ -4,7 +4,7 @@ class CreateDoodles < ActiveRecord::Migration
     	t.string :doodle_text
     	t.integer :lat
     	t.integer :long
-    	t.string :poster_user_id
+    	t.integer :poster_user_id
       t.timestamps null: false
     end
   end

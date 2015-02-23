@@ -24,7 +24,7 @@ module Api
 	  private
 
 	  def doodle_post_params
-			params.require(:doodle).permit(:doodle_text, :lat, :long)
+			params.require(:doodle).permit(:doodle_text, :lat, :long, :poster_user_id)
 	  end
 
 	end

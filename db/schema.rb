@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150223100400) do
     t.string   "doodle_text"
     t.integer  "lat"
     t.integer  "long"
-    t.string   "poster_user_id"
+    t.integer  "poster_user_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

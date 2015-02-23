@@ -44,7 +44,13 @@ Rails.application.routes.draw do
       resources :doodles do
         resources :end_users
       end
+
+      get 'user/:end_user_id/doodles' => 'end_users#getUserDoodles', as: :user_doodles
     end
+
+
+
+
 
 
 

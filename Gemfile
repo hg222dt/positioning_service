@@ -46,5 +46,7 @@ group :development, :test do
   gem 'spring'
 
   gem 'responders', '~> 2.0'
+
+  gem 'geokit-rails'
 end
 
