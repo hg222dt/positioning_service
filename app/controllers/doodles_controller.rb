@@ -1,0 +1,2 @@
+class DoodlesController < ApplicationController
+end
