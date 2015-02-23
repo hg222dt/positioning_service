@@ -40,15 +40,11 @@ Rails.application.routes.draw do
     get   'admin_revoke_key/(:user)'  =>  'admin_login#admin_revoke_key', as: :admin_revoke_key
 
 
-
-
-
-
-      namespace :api, path: '/api' do
-        resources :doodles do
-          resources :end_users
-        end
+    namespace :api, path: '/api' do
+      resources :doodles do
+        resources :end_users
       end
+    end
 
 
 
