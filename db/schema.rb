@@ -15,7 +15,8 @@ ActiveRecord::Schema.define(version: 20150223100400) do
 
   create_table "doodles", force: :cascade do |t|
     t.string   "doodle_text"
-    t.string   "coordinates"
+    t.integer  "lat"
+    t.integer  "long"
     t.string   "poster_user_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
