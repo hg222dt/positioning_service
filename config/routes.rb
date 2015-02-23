@@ -40,7 +40,20 @@ Rails.application.routes.draw do
     get   'admin_revoke_key/(:user)'  =>  'admin_login#admin_revoke_key', as: :admin_revoke_key
 
 
-    resources :doodles
+
+
+
+
+      namespace :api, path: '/api' do
+        resources :doodles do
+          resources :end_users
+        end
+      end
+
+
+
+
+
 
 
   # Example resource route with options:
