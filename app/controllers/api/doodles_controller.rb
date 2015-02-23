@@ -2,8 +2,10 @@ module Api
 	class DoodlesController < ApplicationController
 		respond_to :json, :xml
 
+		before_action :offset_params
+
 	  def index
-	  	@doodles = Doodle.all
+	  	@doodles = Doodle.all.limit(@limit).offset(@offset)
 	    respond_with @doodles
 	  end
 

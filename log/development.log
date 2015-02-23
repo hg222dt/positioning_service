@@ -30306,3 +30306,161 @@ Processing by Api::DoodlesController#create as JSON
   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "lollson!"], ["created_at", "2015-02-23 12:46:41.705860"], ["updated_at", "2015-02-23 12:46:41.705860"]]
   [1m[35m (1.6ms)[0m  commit transaction
 Completed 201 Created in 43ms (Views: 1.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2015-02-23 14:03:55 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 527ms (Views: 496.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin_login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/register-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/doodles-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/apikeys-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/turbolinks-686d2bf7d9d383528c901c64187a8c31.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/application-f6160dc63a84fd9c6148194f715240b7.css?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/affix-31984abe1036c1c2f684af192191ce9f.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/alert-7c03e11fecf6b3ef100f76ae4f08586e.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/button-98bba85be4dcdd597554e0b7ce8e33a2.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/collapse-7a82a3d4fb154ded3d2702465e21ca00.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/carousel-93f34f850a932957c93b7605c79faf45.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/dropdown-65c3929585250221f53bae696936ed44.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/tab-a90a1841af8c1eae12bfa5283a8093b0.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/transition-9e4de96204f41141474e9dbb59570af9.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy-e550695030be1d627d1ba91b14792316.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/modal-ce380b9327d2cf6c826d8df818ea48a1.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/tooltip-4d90d4ee015d2df34a7696864b2ea83c.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap/popover-5a060f876311e7fcb18f35058070de5a.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/bootstrap-sprockets-00b1738c651720f44abc4bbf70bedb3e.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/admin_login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/apikeys-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/doodles-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/register-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/assets/application-1f7a941a78717268593616836da96346.js?body=1" for ::1 at 2015-02-23 14:03:56 +0100
+
+
+Started GET "/api/doodles/index.json?offset=0&limit=2" for ::1 at 2015-02-23 14:04:31 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"offset"=>"0", "limit"=>"2", "id"=>"index"}
+  [1m[35mDoodle Load (0.6ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 68ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=index):
+  app/controllers/api/doodles_controller.rb:20:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.4ms)
+
+
+Started GET "/api/doodles.json?offset=0&limit=2" for ::1 at 2015-02-23 14:05:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"offset"=>"0", "limit"=>"2"}
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 2 OFFSET 0
+Completed 200 OK in 88ms (Views: 56.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/doodles.json?offset=0&limit=1" for ::1 at 2015-02-23 14:05:43 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"offset"=>"0", "limit"=>"1"}
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 1 OFFSET 0[0m
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/doodles.json?offset=0&limit=3" for ::1 at 2015-02-23 14:05:47 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"offset"=>"0", "limit"=>"3"}
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 3 OFFSET 0
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/doodles.json?offset=1&limit=3" for ::1 at 2015-02-23 14:05:55 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"offset"=>"1", "limit"=>"3"}
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 3 OFFSET 1[0m
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/doodles.json?offset=2&limit=3" for ::1 at 2015-02-23 14:06:02 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"offset"=>"2", "limit"=>"3"}
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 3 OFFSET 2
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/doodles.json?offset=5&limit=3" for ::1 at 2015-02-23 14:06:11 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"offset"=>"5", "limit"=>"3"}
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 3 OFFSET 5[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/doodles.json?offset=4&limit=3" for ::1 at 2015-02-23 14:06:17 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"offset"=>"4", "limit"=>"3"}
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 3 OFFSET 4
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms)
