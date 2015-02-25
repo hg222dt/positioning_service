@@ -29,14 +29,12 @@ module Api
 
 	  def create
 
-
-# Om inte taggen hittas bör felmeddelande skickas
-# Eventuellt gör om det så att taggar alltid skrivs unikt av användaren och att det skapas nya i databasen om taggen inte finns
-
 	  	@tag = Tag.where("name = ?", params[:tag_name]).first
 
-
-
+	  	if @tag == nil
+	  		@tag = Tag.new(name: params[:tag_name])
+	  	end
+	  		
 	  	@doodle = Doodle.new
 	  	@doodle.doodle_text = params[:doodle_text]
 	  	@doodle.end_user_id = params[:end_user_id]

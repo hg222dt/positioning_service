@@ -35709,3 +35709,159 @@ Processing by Api::EndUsersController#index as JSON
 Geokit is using the domain: localhost
   [1m[36mEndUser Load (0.2ms)[0m  [1mSELECT "end_users".* FROM "end_users"[0m
 Completed 200 OK in 14ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-02-25 22:51:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 626ms (Views: 587.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin_login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/doodles-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/apikeys-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/application-f6160dc63a84fd9c6148194f715240b7.css?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/register-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/turbolinks-686d2bf7d9d383528c901c64187a8c31.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/affix-31984abe1036c1c2f684af192191ce9f.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/alert-7c03e11fecf6b3ef100f76ae4f08586e.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/button-98bba85be4dcdd597554e0b7ce8e33a2.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/dropdown-65c3929585250221f53bae696936ed44.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/carousel-93f34f850a932957c93b7605c79faf45.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/collapse-7a82a3d4fb154ded3d2702465e21ca00.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/tab-a90a1841af8c1eae12bfa5283a8093b0.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/transition-9e4de96204f41141474e9dbb59570af9.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy-e550695030be1d627d1ba91b14792316.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/modal-ce380b9327d2cf6c826d8df818ea48a1.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/tooltip-4d90d4ee015d2df34a7696864b2ea83c.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap/popover-5a060f876311e7fcb18f35058070de5a.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/admin_login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/bootstrap-sprockets-00b1738c651720f44abc4bbf70bedb3e.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/apikeys-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/doodles-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/register-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-25 22:51:01 +0100
+
+
+Started GET "/api/tags.json" for ::1 at 2015-02-25 22:51:08 +0100
+Processing by Api::TagsController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mTag Load (0.6ms)[0m  SELECT  "tags".* FROM "tags" LIMIT 20 OFFSET 0
+Completed 200 OK in 26ms (Views: 10.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 22:51:29 +0100
+
+SyntaxError (/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:39: syntax error, unexpected tIDENTIFIER, expecting ')'
+	  		@tag = Tag.new(name: 0params[:tag_name])
+	  		                            ^
+/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:39: syntax error, unexpected ')', expecting keyword_end
+/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:80: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/api/doodles_controller.rb:39: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/controllers/api/doodles_controller.rb:39: syntax error, unexpected ')', expecting keyword_end
+  app/controllers/api/doodles_controller.rb:80: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (28.1ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 22:52:41 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 21:52:41.361392"], ["updated_at", "2015-02-25 21:52:41.361392"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "hepp"], ["created_at", "2015-02-25 21:52:41.364303"], ["updated_at", "2015-02-25 21:52:41.364303"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 16], ["tag_id", 6], ["created_at", "2015-02-25 21:52:41.365788"], ["updated_at", "2015-02-25 21:52:41.365788"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id"  ORDER BY "doodles"."id" DESC LIMIT 1[0m
+Completed 201 Created in 61ms (Views: 2.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/tags.json" for ::1 at 2015-02-25 22:52:48 +0100
+Processing by Api::TagsController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mTag Load (0.4ms)[0m  SELECT  "tags".* FROM "tags" LIMIT 20 OFFSET 0
+Completed 200 OK in 62ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 22:52:59 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 21:52:59.268329"], ["updated_at", "2015-02-25 21:52:59.268329"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["tag_id", 6], ["location_id", 17], ["created_at", "2015-02-25 21:52:59.271599"], ["updated_at", "2015-02-25 21:52:59.271599"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id"  ORDER BY "doodles"."id" DESC LIMIT 1
+Completed 201 Created in 13ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/tags.json" for ::1 at 2015-02-25 22:53:04 +0100
+Processing by Api::TagsController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.2ms)
