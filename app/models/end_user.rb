@@ -1,5 +1,7 @@
 class EndUser < ActiveRecord::Base
 
+	has_many :doodles
+
 	has_secure_password
 
 

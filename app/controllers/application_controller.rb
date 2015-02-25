@@ -21,7 +21,29 @@ class ApplicationController < ActionController::Base
     @limit  ||= LIMIT
   end
 
-  
+
+
+
+  LAT = 0
+  LONG = 0
+  RANGE = 0
+
+  def coordinates_params
+    if params[:lat].present?
+      @lat = params[:lat].to_i
+    end
+    if params[:long].present?
+      @long = params[:long].to_i
+    end
+    if params[:range].present?
+      @range = params[:range].to_i
+    end
+    @lat ||= LAT
+    @long  ||= LONG
+    @range ||= RANGE
+  end
+
+
 
   def current_user
   	@current_user ||= User.find(session[:userid]) if session[:userid]

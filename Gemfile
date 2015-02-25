@@ -29,6 +29,13 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
+
+gem 'responders', '~> 2.0'
+
+gem 'geokit-rails'
+
+gem 'jwt'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -45,8 +52,5 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'responders', '~> 2.0'
-
-  gem 'geokit-rails'
 end
 

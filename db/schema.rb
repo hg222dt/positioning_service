@@ -11,15 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150223100400) do
+ActiveRecord::Schema.define(version: 20150224160345) do
 
   create_table "doodles", force: :cascade do |t|
     t.string   "doodle_text"
-    t.integer  "lat"
-    t.integer  "long"
-    t.integer  "poster_user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "location_id"
+    t.integer  "end_user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "end_users", force: :cascade do |t|
@@ -29,6 +28,13 @@ ActiveRecord::Schema.define(version: 20150223100400) do
     t.string   "bio_text"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

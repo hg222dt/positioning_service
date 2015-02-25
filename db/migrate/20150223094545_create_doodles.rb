@@ -2,9 +2,8 @@ class CreateDoodles < ActiveRecord::Migration
   def change
     create_table :doodles do |t|
     	t.string :doodle_text
-    	t.integer :lat
-    	t.integer :long
-    	t.integer :poster_user_id
+    	t.belongs_to :location
+    	t.belongs_to :end_user
       t.timestamps null: false
     end
   end

@@ -41,11 +41,17 @@ Rails.application.routes.draw do
 
 
     namespace :api, path: '/api' do
+
       resources :doodles do
         resources :end_users
       end
 
       get 'user/:end_user_id/doodles' => 'end_users#getUserDoodles', as: :user_doodles
+      
+      get 'users' => 'end_users#index', as: :users_index
+
+      post 'user' => 'end_users#create', as: :user_create
+    
     end
 
 

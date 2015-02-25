@@ -30887,3 +30887,1424 @@ Processing by Api::EndUsersController#getUserDoodles as JSON
 Geokit is using the domain: localhost
   [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE (poster_user_id = '43')  ORDER BY "doodles"."created_at" ASC LIMIT 1 OFFSET 1[0m
 Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-02-24 16:15:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 4696ms (Views: 4664.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-02-24 16:15:29 +0100
+Processing by UsersController#index as HTML
+Geokit is using the domain: localhost
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 256ms (Views: 254.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin_login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/doodles-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/register-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/application-f6160dc63a84fd9c6148194f715240b7.css?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/apikeys-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/bootstrap/button-98bba85be4dcdd597554e0b7ce8e33a2.js?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/turbolinks-686d2bf7d9d383528c901c64187a8c31.js?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/end_user-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/bootstrap/affix-31984abe1036c1c2f684af192191ce9f.js?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/bootstrap/carousel-93f34f850a932957c93b7605c79faf45.js?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/bootstrap/alert-7c03e11fecf6b3ef100f76ae4f08586e.js?body=1" for ::1 at 2015-02-24 16:15:29 +0100
+
+
+Started GET "/assets/bootstrap/collapse-7a82a3d4fb154ded3d2702465e21ca00.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/bootstrap/dropdown-65c3929585250221f53bae696936ed44.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/bootstrap/tab-a90a1841af8c1eae12bfa5283a8093b0.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy-e550695030be1d627d1ba91b14792316.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/bootstrap/modal-ce380b9327d2cf6c826d8df818ea48a1.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/bootstrap/tooltip-4d90d4ee015d2df34a7696864b2ea83c.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/bootstrap/popover-5a060f876311e7fcb18f35058070de5a.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/bootstrap-sprockets-00b1738c651720f44abc4bbf70bedb3e.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/bootstrap/transition-9e4de96204f41141474e9dbb59570af9.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/apikeys-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/admin_login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/doodles-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/end_user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/register-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/assets/application-b2aa235b8d807d604e630cc0dbc2d9c1.js?body=1" for ::1 at 2015-02-24 16:15:30 +0100
+
+
+Started GET "/api/users/index.json" for ::1 at 2015-02-24 16:19:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+Completed 500 Internal Server Error in 36ms
+
+ActionView::MissingTemplate (Missing template api/end_users/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates"
+  * "/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/missing_template.html.erb within rescues/layout (42.6ms)
+
+
+Started GET "/api/users/index.json" for ::1 at 2015-02-24 16:21:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (1.2ms)[0m  SELECT "end_users".* FROM "end_users"
+Completed 200 OK in 78ms (Views: 1.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 16:24:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hejhej", "email"=>"hej@hej.se", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"testText Bio"}, "doodle"=>{}}
+Geokit is using the domain: localhost
+Completed 400 Bad Request in 24ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: doodle):
+  app/controllers/api/doodles_controller.rb:27:in `doodle_post_params'
+  app/controllers/api/doodles_controller.rb:13:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (77.2ms)
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-24 16:26:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hejhej", "email"=>"hej@hej.se", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"testText Bio"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "end_users" ("username", "email", "password_digest", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "hejhej"], ["email", "hej@hej.se"], ["password_digest", "$2a$10$Ph9fPdeoB7ZAHdQzt3VYmOLiub4/Nj03w4gws0J6BQp/sf4oS4w.S"], ["bio_text", "testText Bio"], ["created_at", "2015-02-24 15:26:47.414745"], ["updated_at", "2015-02-24 15:26:47.414745"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 134ms
+
+NoMethodError (undefined method `api_end_user_url' for #<Api::EndUsersController:0x007fc56caf13b8>):
+  app/controllers/api/end_users_controller.rb:21:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.2ms)
+
+
+Started GET "/api/users/index.json" for ::1 at 2015-02-24 16:28:43 +0100
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (0.3ms)[0m  SELECT "end_users".* FROM "end_users"
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users/index.json" for ::1 at 2015-02-24 16:37:03 +0100
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mEndUser Load (0.3ms)[0m  [1mSELECT "end_users".* FROM "end_users"[0m
+Completed 200 OK in 15ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-24 16:37:37 +0100
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hejhej2", "email"=>"hej2@hej.se", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"testText Bio"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej2@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "end_users" ("username", "email", "password_digest", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "hejhej2"], ["email", "hej2@hej.se"], ["password_digest", "$2a$10$kopCvLotHSGUImBdEmSU2OID3nOeb0SYklErYGVv7mJh4F7nSnuWm"], ["bio_text", "testText Bio"], ["created_at", "2015-02-24 15:37:37.891478"], ["updated_at", "2015-02-24 15:37:37.891478"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 94ms
+
+NoMethodError (undefined method `api_end_user_url' for #<Api::EndUsersController:0x007fc56cca3f80>):
+  app/controllers/api/end_users_controller.rb:21:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+
+
+Started GET "/api/users/index.json" for ::1 at 2015-02-24 16:37:40 +0100
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (0.1ms)[0m  SELECT "end_users".* FROM "end_users"
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLocations (20150224160345)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150224160345"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (2.2ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "locations"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150224160345"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLocations (20150224160345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "location_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150224160345"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 17:43:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "doodle":
+    {
+        "doodle_text": "Här kommer koordinater!!!!",
+        "poster_user_id": "43"
+    },
+    "coordinates":
+    {
+        "lat": 123,
+        "long": 123,
+    }
+}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{
+    "doodle":
+    {
+        "doodle_text": "Här kommer koordinater!!!!",
+        "poster_user_id": "43"
+    },
+    "coordinates":
+    {
+        "lat": 123,
+        "long": 123,
+    }
+}'):
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (20.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (54.2ms)
+
+
+Started GET "/api/users/index.json" for ::1 at 2015-02-24 17:45:32 +0100
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (0.5ms)[0m  SELECT "end_users".* FROM "end_users"
+Completed 200 OK in 19ms (Views: 7.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/index.json" for ::1 at 2015-02-24 17:45:33 +0100
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mEndUser Load (0.1ms)[0m  [1mSELECT "end_users".* FROM "end_users"[0m
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 17:45:51 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "doodle":
+    {
+        "doodle_text": "Här kommer koordinater!!!!",
+        "poster_user_id": "43"
+    },
+    "coordinates":
+    {
+        "lat": 123,
+        "long": 123,
+    }
+}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{
+    "doodle":
+    {
+        "doodle_text": "Här kommer koordinater!!!!",
+        "poster_user_id": "43"
+    },
+    "coordinates":
+    {
+        "lat": 123,
+        "long": 123,
+    }
+}'):
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (24.5ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 17:46:20 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Här kommer koordinater!!!!", "poster_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "poster_user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["doodle_text", "Här kommer koordinater!!!!"], ["poster_user_id", 43], ["created_at", "2015-02-24 16:46:20.825713"], ["updated_at", "2015-02-24 16:46:20.825713"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 201 Created in 28ms (Views: 4.5ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 17:46:53 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Här kommer koordinater!", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+Unpermitted parameters: lat, long
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "doodles" ("doodle_text", "poster_user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["doodle_text", "Här kommer koordinater!"], ["poster_user_id", 43], ["created_at", "2015-02-24 16:46:53.077138"], ["updated_at", "2015-02-24 16:46:53.077138"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 8ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/users/index.json" for ::1 at 2015-02-24 17:46:58 +0100
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (0.2ms)[0m  SELECT "end_users".* FROM "end_users"
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/doodles/index.json" for ::1 at 2015-02-24 17:47:07 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"index"}
+Geokit is using the domain: localhost
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 11ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=index):
+  app/controllers/api/doodles_controller.rb:23:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (26.6ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 17:47:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 46ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 17:48:29 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Här kommer koordinater!", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+Unpermitted parameters: doodle_text, poster_user_id
+Unpermitted parameters: lat, long
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "doodles" ("doodle_text", "poster_user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["doodle_text", "Här kommer koordinater!"], ["poster_user_id", 43], ["created_at", "2015-02-24 16:48:29.174679"], ["updated_at", "2015-02-24 16:48:29.174679"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 19ms (Views: 2.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 17:48:32 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "location_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_doodles_on_location_id" ON "doodles" ("location_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+[0m
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 18:30:03 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+Completed 500 Internal Server Error in 36ms
+
+NoMethodError (undefined method `<<' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:21:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (37.4ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 18:34:36 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.8ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 21ms (Views: 8.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 18:34:38 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/users.json" for ::1 at 2015-02-24 18:34:45 +0100
+
+ActionController::RoutingError (No route matches [GET] "/api/users.json"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (11.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (61.2ms)
+
+
+Started GET "/api/users.json" for ::1 at 2015-02-24 18:35:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (0.5ms)[0m  SELECT "end_users".* FROM "end_users"
+Completed 200 OK in 48ms (Views: 6.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 18:35:20 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 17ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 18:35:20 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 18:35:36 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-02-24 17:35:36.146986"], ["updated_at", "2015-02-24 17:35:36.146986"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 87ms
+
+NoMethodError (undefined method `<<' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:23:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (24.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "locations"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150224160345"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLocations (20150224160345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150224160345"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+[0m
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 18:40:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+Completed 500 Internal Server Error in 26ms
+
+NameError (uninitialized constant Api::DoodlesController::Locatdion):
+  app/controllers/api/doodles_controller.rb:17:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (57.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (83.4ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 18:40:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 17:40:35.938830"], ["updated_at", "2015-02-24 17:40:35.938830"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 500 Internal Server Error in 47ms
+
+NoMethodError (undefined method `<<' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:23:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (27.9ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 18:41:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 33ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 18:41:53 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-02-24 17:41:53.148543"], ["updated_at", "2015-02-24 17:41:53.148543"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 26ms
+
+NoMethodError (undefined method `>>' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:23:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 18:43:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 52ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 18:43:13 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-02-24 17:43:13.404829"], ["updated_at", "2015-02-24 17:43:13.404829"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 22ms
+
+NoMethodError (undefined method `<<' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:23:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 18:47:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 48ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 18:47:14 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-02-24 17:47:14.692390"], ["updated_at", "2015-02-24 17:47:14.692390"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 30ms
+
+NoMethodError (undefined method `push' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:25:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (32.1ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 18:48:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 17:48:01.103808"], ["updated_at", "2015-02-24 17:48:01.103808"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 500 Internal Server Error in 47ms
+
+NoMethodError (undefined method `push' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:25:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (20.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "locations"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150224160345"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLocations (20150224160345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "doodle_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150224160345"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 19:15:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 43ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 19:15:31 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-02-24 18:15:31.539233"], ["updated_at", "2015-02-24 18:15:31.539233"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 30ms
+
+NoMethodError (undefined method `push' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:25:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "location_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 19:23:07 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 18:23:08.107245"], ["updated_at", "2015-02-24 18:23:08.107245"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 500 Internal Server Error in 51ms
+
+NoMethodError (undefined method `push' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:25:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (33.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mDROP TABLE "locations"[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150224160345"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLocations (20150224160345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150224160345"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 20:13:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 19:13:02.879944"], ["updated_at", "2015-02-24 19:13:02.879944"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 51ms
+
+NoMethodError (undefined method `push' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:25:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (39.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "location_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_doodles_on_location_id" ON "doodles" ("location_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_doodles_on_location_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.5ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "location_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 21:01:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 20:01:43.094157"], ["updated_at", "2015-02-24 20:01:43.094157"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 500 Internal Server Error in 47ms
+
+NoMethodError (undefined method `push' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:25:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (40.2ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 21:09:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 20:09:45.138415"], ["updated_at", "2015-02-24 20:09:45.138415"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 40ms
+
+NoMethodError (undefined method `push' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:25:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (32.9ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 21:10:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 20:10:21.738609"], ["updated_at", "2015-02-24 20:10:21.738609"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "doodles" ("location_id", "created_at", "updated_at") VALUES (?, ?, ?)  [["location_id", 4], ["created_at", "2015-02-24 20:10:21.743466"], ["updated_at", "2015-02-24 20:10:21.743466"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 61ms (Views: 2.5ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 21:16:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 20:16:19.122309"], ["updated_at", "2015-02-24 20:16:19.122309"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "doodles" ("location_id", "created_at", "updated_at") VALUES (?, ?, ?)  [["location_id", 5], ["created_at", "2015-02-24 20:16:19.128426"], ["updated_at", "2015-02-24 20:16:19.128426"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 66ms
+
+NoMethodError (undefined method `api_doodle_location_url' for #<Api::DoodlesController:0x007fa7a1431ed0>):
+  app/controllers/api/doodles_controller.rb:25:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (35.9ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 21:16:32 +0100
+
+SyntaxError (/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:25: syntax error, unexpected tIVAR, expecting keyword_end):
+  app/controllers/api/doodles_controller.rb:25: syntax error, unexpected tIVAR, expecting keyword_end
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 21:17:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 20:17:53.662386"], ["updated_at", "2015-02-24 20:17:53.662386"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+Completed 500 Internal Server Error in 45ms
+
+NoMethodError (undefined method `<<' for #<Doodle:0x007fcbc7928f20>):
+  app/controllers/api/doodles_controller.rb:24:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (29.4ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 21:19:05 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-02-24 20:19:05.388650"], ["updated_at", "2015-02-24 20:19:05.388650"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("location_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["location_id", 7], ["created_at", "2015-02-24 20:19:05.391151"], ["updated_at", "2015-02-24 20:19:05.391151"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 201 Created in 22ms (Views: 1.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-24 21:19:10 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-24 21:23:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "locations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-02-24 20:23:54.090103"], ["updated_at", "2015-02-24 20:23:54.090103"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "doodles" ("location_id", "created_at", "updated_at") VALUES (?, ?, ?)  [["location_id", 8], ["created_at", "2015-02-24 20:23:54.095689"], ["updated_at", "2015-02-24 20:23:54.095689"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 64ms (Views: 2.4ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 08:39:05 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"Testar location 1", "poster_user_id"=>"43", "lat"=>123, "long"=>123, "doodle"=>{"doodle_text"=>"Testar location 1", "poster_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "locations" ("latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["latitude", 123.0], ["longitude", 123.0], ["created_at", "2015-02-25 07:39:05.429537"], ["updated_at", "2015-02-25 07:39:05.429537"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "doodles" ("doodle_text", "poster_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "Testar location 1"], ["poster_user_id", 43], ["location_id", 9], ["created_at", "2015-02-25 07:39:05.436037"], ["updated_at", "2015-02-25 07:39:05.436037"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 22ms (Views: 0.9ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 08:53:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"Testar location 2", "poster_user_id"=>"43", "lat"=>123, "long"=>123, "doodle"=>{"doodle_text"=>"Testar location 2", "poster_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "locations" ("latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["latitude", 123.0], ["longitude", 123.0], ["created_at", "2015-02-25 07:53:21.788008"], ["updated_at", "2015-02-25 07:53:21.788008"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "doodles" ("doodle_text", "poster_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "Testar location 2"], ["poster_user_id", 43], ["location_id", 10], ["created_at", "2015-02-25 07:53:21.795209"], ["updated_at", "2015-02-25 07:53:21.795209"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 65ms (Views: 2.5ms | ActiveRecord: 4.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mDROP TABLE "end_users"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223100400"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEndUsers (20150223100400)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "location_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEndUsers (20150223100400)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "end_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "username" varchar, "bio_text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223100400"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "poster_user_id" integer, "location_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.6ms)[0m  [1mDROP TABLE "doodles"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150223094545"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDoodles (20150223094545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "doodles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "doodle_text" varchar, "location_id" integer, "end_user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150223094545"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 09:04:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"Testar location 2", "end_user_id"=>"43", "lat"=>123, "long"=>123, "doodle"=>{"doodle_text"=>"Testar location 2", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "locations" ("latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["latitude", 123.0], ["longitude", 123.0], ["created_at", "2015-02-25 08:04:23.242475"], ["updated_at", "2015-02-25 08:04:23.242475"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "Testar location 2"], ["end_user_id", 43], ["location_id", 11], ["created_at", "2015-02-25 08:04:23.252832"], ["updated_at", "2015-02-25 08:04:23.252832"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 63ms (Views: 1.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/users.json" for ::1 at 2015-02-25 09:04:45 +0100
+Processing by Api::EndUsersController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (0.3ms)[0m  SELECT "end_users".* FROM "end_users"
+Completed 200 OK in 18ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 09:05:00 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 09:05:09 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"Testar location 3", "end_user_id"=>"43", "lat"=>123, "long"=>123, "doodle"=>{"doodle_text"=>"Testar location 3", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "locations" ("latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["latitude", 123.0], ["longitude", 123.0], ["created_at", "2015-02-25 08:05:09.907271"], ["updated_at", "2015-02-25 08:05:09.907271"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "Testar location 3"], ["end_user_id", 43], ["location_id", 12], ["created_at", "2015-02-25 08:05:09.910033"], ["updated_at", "2015-02-25 08:05:09.910033"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 11ms (Views: 0.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 09:05:11 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms)
