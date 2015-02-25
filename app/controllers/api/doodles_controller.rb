@@ -29,17 +29,15 @@ module Api
 
 	  def create
 
-	  	@location = Location.new
-	  	@location.lat = params[:lat]
-	  	@location.lng = params[:long]
-	  	@location.save
-
 	  	@doodle = Doodle.new
 	  	@doodle.doodle_text = params[:doodle_text]
 	  	@doodle.end_user_id = params[:end_user_id]
-	  	@doodle.location_id = @location.id
+	  	@doodle.location = Location.new(lat: params[:lat], lng: params[:long])
 	  	@doodle.save
-	  	respond_with :api, @doodle
+
+	  	@doodleLocation = Doodle.joins(:location).last
+
+	  	respond_with :api, @doodleLocation
 	  end
 
 	  def show

@@ -1,6 +1,6 @@
 class Location < ActiveRecord::Base
 
-	# has_one :doodle
+	has_one :doodle
 
 	acts_as_mappable	:default_units => :kms,
                   	:default_formula => :sphere,

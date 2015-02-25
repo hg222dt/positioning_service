@@ -4,7 +4,6 @@ class CreateLocations < ActiveRecord::Migration
     	t.float :lat
     	t.float :lng
     	t.float :distance
-    	t.belongs_to :doodle
       t.timestamps null: false
     end
   end

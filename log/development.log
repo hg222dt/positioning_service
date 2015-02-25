@@ -34803,3 +34803,193 @@ Geokit is using the domain: localhost
   [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 16)
   [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 17)[0m
 Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 1.4ms)
+  [1m[36mDoodle Load (0.5ms)[0m  [1mSELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."id" ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.4ms)[0m  [1mDROP TABLE "locations"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20150224160345"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLocations (20150224160345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lat" float, "lng" float, "distance" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150224160345"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "doodles" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-02-25 17:41:09.862495"], ["updated_at", "2015-02-25 17:41:09.862495"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."id" DESC LIMIT 1
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."id" DESC LIMIT 1[0m
+  [1m[35mDoodle Load (0.4ms)[0m  SELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."id" DESC LIMIT 1
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."id" DESC LIMIT 1[0m
+  [1m[35mEndUser Load (0.2ms)[0m  SELECT  "end_users".* FROM "end_users"  ORDER BY "end_users"."id" DESC LIMIT 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" DESC LIMIT 1[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" DESC LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" DESC LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" DESC LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" DESC LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 123.0], ["lng", 123.0], ["created_at", "2015-02-25 17:47:30.149670"], ["updated_at", "2015-02-25 17:47:30.149670"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" DESC LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  ORDER BY "locations"."id" DESC LIMIT 1[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."location_id" = ? LIMIT 1  [["location_id", 1]]
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 18:50:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 17:50:10.290294"], ["updated_at", "2015-02-25 17:50:10.290294"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 2], ["created_at", "2015-02-25 17:50:10.300660"], ["updated_at", "2015-02-25 17:50:10.300660"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 116ms (Views: 3.0ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 18:51:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 17:51:14.421784"], ["updated_at", "2015-02-25 17:51:14.421784"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 3], ["created_at", "2015-02-25 17:51:14.442330"], ["updated_at", "2015-02-25 17:51:14.442330"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 113ms (Views: 1.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 18:51:38 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 17:51:38.437326"], ["updated_at", "2015-02-25 17:51:38.437326"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 500 Internal Server Error in 16ms
+
+NoMethodError (undefined method `<<' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:38:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (39.3ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 18:52:02 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 17:52:02.264858"], ["updated_at", "2015-02-25 17:52:02.264858"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 22ms
+
+ActiveRecord::AssociationTypeMismatch (Location(#70189510785560) expected, got Fixnum(#70189501036180)):
+  app/controllers/api/doodles_controller.rb:38:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (34.9ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 18:52:32 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 17:52:32.197269"], ["updated_at", "2015-02-25 17:52:32.197269"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 6], ["created_at", "2015-02-25 17:52:32.198796"], ["updated_at", "2015-02-25 17:52:32.198796"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 22ms (Views: 0.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/locations.json" for ::1 at 2015-02-25 18:53:27 +0100
+Processing by Api::DoodlesController#getAllLocations as JSON
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.5ms)[0m  SELECT "locations".* FROM "locations"
+Completed 200 OK in 20ms (Views: 8.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 18:54:08 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 17:54:08.375653"], ["updated_at", "2015-02-25 17:54:08.375653"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 7], ["created_at", "2015-02-25 17:54:08.378072"], ["updated_at", "2015-02-25 17:54:08.378072"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 201 Created in 19ms (Views: 0.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/locations.json" for ::1 at 2015-02-25 18:54:11 +0100
+Processing by Api::DoodlesController#getAllLocations as JSON
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 18:54:17 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 17:54:17.510824"], ["updated_at", "2015-02-25 17:54:17.510824"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 8], ["created_at", "2015-02-25 17:54:17.513086"], ["updated_at", "2015-02-25 17:54:17.513086"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 12ms (Views: 0.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/locations.json" for ::1 at 2015-02-25 18:54:21 +0100
+Processing by Api::DoodlesController#getAllLocations as JSON
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations"
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 18:55:26 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 17:55:27.003257"], ["updated_at", "2015-02-25 17:55:27.003257"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 9], ["created_at", "2015-02-25 17:55:27.005849"], ["updated_at", "2015-02-25 17:55:27.005849"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 500 Internal Server Error in 75ms
+
+NoMethodError (undefined method `joins' for #<Doodle:0x007fac8dba2c00>):
+  app/controllers/api/doodles_controller.rb:37:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.4ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 18:57:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 17:57:14.946375"], ["updated_at", "2015-02-25 17:57:14.946375"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 10], ["created_at", "2015-02-25 17:57:14.952099"], ["updated_at", "2015-02-25 17:57:14.952099"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT  "doodles".* FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id"  ORDER BY "doodles"."id" DESC LIMIT 1
+Completed 201 Created in 134ms (Views: 3.6ms | ActiveRecord: 3.0ms)

@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20150224160345) do
     t.float    "lat"
     t.float    "lng"
     t.float    "distance"
-    t.integer  "doodle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
