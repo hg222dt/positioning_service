@@ -46,11 +46,13 @@ Rails.application.routes.draw do
         resources :end_users
       end
 
-      get 'user/:end_user_id/doodles' => 'end_users#getUserDoodles', as: :user_doodles
+      get 'user/:end_user_id/doodles' => 'end_users#getUsersDoodles', as: :user_doodles
       
       get 'users' => 'end_users#index', as: :users_index
 
       post 'user' => 'end_users#create', as: :user_create
+
+      get 'locations' => 'doodles#getAllLocations', as: :locations
     
     end
 

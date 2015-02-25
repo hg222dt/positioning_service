@@ -24,16 +24,16 @@ class ApplicationController < ActionController::Base
 
 
 
-  LAT = 0
-  LONG = 0
-  RANGE = 0
+  LAT = 123
+  LONG = 123
+  RANGE = 500
 
   def coordinates_params
     if params[:lat].present?
-      @lat = params[:lat].to_i
+      @lat = params[:lat].to_f
     end
     if params[:long].present?
-      @long = params[:long].to_i
+      @long = params[:long].to_f
     end
     if params[:range].present?
       @range = params[:range].to_i

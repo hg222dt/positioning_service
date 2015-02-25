@@ -6,10 +6,12 @@ module Api
 		before_action :offset_params
 
 
-		def getUserDoodles
+		def getUsersDoodles
 
-			@doodles = Doodle.where("poster_user_id = ?", params[:end_user_id]).order(:created_at).all.limit(@limit).offset(@offset);
+			@doodles = Doodle.where("end_user_id = ?", params[:end_user_id]).order(:created_at).all.limit(@limit).offset(@offset);
 		
+			# $doodles = EndUser.find(params[:end_user_id]).doodles
+
 			respond_with :api, @doodles
 
 		end
@@ -17,11 +19,13 @@ module Api
 		def create
 			@end_user = EndUser.new(end_user_params);
 
+
+
 			if @end_user.save
 		    respond_with :api, @end_user
 			else
 				#Skicka tillbaka felmeddelande?
-				
+
 			end
 
 		end

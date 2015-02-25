@@ -31,8 +31,10 @@ ActiveRecord::Schema.define(version: 20150224160345) do
   end
 
   create_table "locations", force: :cascade do |t|
-    t.float    "latitude"
-    t.float    "longitude"
+    t.float    "lat"
+    t.float    "lng"
+    t.float    "distance"
+    t.integer  "doodle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

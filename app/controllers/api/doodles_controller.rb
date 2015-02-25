@@ -3,10 +3,28 @@ module Api
 		respond_to :json, :xml
 
 		before_action :offset_params
+		before_action :coordinates_params
 
 	  def index
-	  	@doodles = Doodle.all.limit(@limit).offset(@offset)
-	    respond_with :api, @doodles
+
+	  	if params[:lat].present? and params[:long].present? and params[:range].present?
+	  		
+		  	@location_origin = Location.new
+		  	@location_origin.lat = @lat
+		  	@location_origin.lng = @long
+		  	@locations = Location.within(@range, :origin => @location_origin)
+
+		  	@doodles = []
+
+		  	@locations.each do |loc|
+		  		@doodles << Doodle.where("location_id = ?", loc.id)
+				end
+
+				respond_with :api, @doodles
+			else
+		  	@doodles = Doodle.all.limit(@limit).offset(@offset)
+		    respond_with :api, @doodles
+		  end
 	  end
 
 	  def create
@@ -15,22 +33,26 @@ module Api
 	  	@doodle.end_user_id = params[:end_user_id]
 
 	  	@location = Location.new
-	  	@location.latitude = params[:lat]
-	  	@location.longitude = params[:long]
+	  	@location.lat = params[:lat]
+	  	@location.lng = params[:long]
+	  	@location.doodle_id = 14
 	  	@location.save
 
-	  	@doodle.location_id = @location.id
-
+	  	
 	  	@doodle.save
 	  	respond_with :api, @doodle
 	  end
 
 	  def show
-	  	coordinates_params
 
 	  	@doodle = Doodle.find(params[:id]);
 	  	respond_with :api, @doodle
 
+	  end
+
+	  def getAllLocations
+	  	@locations = Location.all
+	  	respond_with :api, @locations
 	  end
 	  
 

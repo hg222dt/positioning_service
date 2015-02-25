@@ -32,7 +32,7 @@ gem 'autoprefixer-rails'
 
 gem 'responders', '~> 2.0'
 
-gem 'geokit-rails'
+gem 'geokit-rails', github: 'geokit/geokit-rails'
 
 gem 'jwt'
 
