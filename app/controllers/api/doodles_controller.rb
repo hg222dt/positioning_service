@@ -12,7 +12,7 @@ module Api
 		  	@location_origin = Location.new
 		  	@location_origin.lat = @lat
 		  	@location_origin.lng = @long
-		  	@locations = Location.within(@range, :origin => @location_origin)
+		  	@locations = Location.within(@range, :origin => @location_origin).order(:created_at).all.limit(@limit).offset(@offset);
 
 		  	@doodles = []
 
@@ -28,17 +28,16 @@ module Api
 	  end
 
 	  def create
-	  	@doodle = Doodle.new
-	  	@doodle.doodle_text = params[:doodle_text]
-	  	@doodle.end_user_id = params[:end_user_id]
 
 	  	@location = Location.new
 	  	@location.lat = params[:lat]
 	  	@location.lng = params[:long]
-	  	@location.doodle_id = 14
 	  	@location.save
 
-	  	
+	  	@doodle = Doodle.new
+	  	@doodle.doodle_text = params[:doodle_text]
+	  	@doodle.end_user_id = params[:end_user_id]
+	  	@doodle.location_id = @location.id
 	  	@doodle.save
 	  	respond_with :api, @doodle
 	  end

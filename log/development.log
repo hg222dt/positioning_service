@@ -34083,3 +34083,723 @@ Processing by Api::DoodlesController#index as JSON
 Geokit is using the domain: localhost
   [1m[36mDoodle Load (0.7ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0[0m
 Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 15:41:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.5ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 90ms (Views: 10.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 15:41:42 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "locations" ("lat", "lng", "doodle_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["doodle_id", 14], ["created_at", "2015-02-25 14:41:42.973155"], ["updated_at", "2015-02-25 14:41:42.973155"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 20ms
+
+NoMethodError (undefined method `location_id' for #<Location:0x007fc25eb25908>):
+  app/controllers/api/doodles_controller.rb:41:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (54.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (82.3ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 15:41:55 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "doodle_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["doodle_id", 14], ["created_at", "2015-02-25 14:41:55.561198"], ["updated_at", "2015-02-25 14:41:55.561198"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 5], ["created_at", "2015-02-25 14:41:55.567972"], ["updated_at", "2015-02-25 14:41:55.567972"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 26ms (Views: 2.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 15:41:59 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 15:42:09 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "locations" ("lat", "lng", "doodle_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["doodle_id", 14], ["created_at", "2015-02-25 14:42:09.988125"], ["updated_at", "2015-02-25 14:42:09.988125"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 6], ["created_at", "2015-02-25 14:42:09.992160"], ["updated_at", "2015-02-25 14:42:09.992160"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 201 Created in 10ms (Views: 0.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 15:42:11 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-25 15:42:41 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43", "lat"=>55.609613, "long"=>13.000892, "doodle"=>{"doodle_text"=>"En doodle i malmö", "end_user_id"=>"43"}}
+Geokit is using the domain: localhost
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 14:42:42.023640"], ["updated_at", "2015-02-25 14:42:42.023640"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["doodle_text", "En doodle i malmö"], ["end_user_id", 43], ["location_id", 7], ["created_at", "2015-02-25 14:42:42.033073"], ["updated_at", "2015-02-25 14:42:42.033073"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 29ms (Views: 0.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 15:42:43 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505" for ::1 at 2015-02-25 15:42:51 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))[0m
+  [1m[35mDoodle Load (0.6ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 1)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 2)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 3)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 4)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 5)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 6)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 7)
+Completed 200 OK in 16ms (Views: 5.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=1" for ::1 at 2015-02-25 15:45:40 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"1"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 1 OFFSET 0[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 1)
+Completed 200 OK in 28ms (Views: 1.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=3&limit=1" for ::1 at 2015-02-25 15:45:46 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"3", "limit"=>"1"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 1 OFFSET 3[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 4)
+Completed 200 OK in 61ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505" for ::1 at 2015-02-25 15:45:51 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 20 OFFSET 0[0m
+  [1m[35mDoodle Load (0.6ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 1)
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 2)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 3)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 4)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 5)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 6)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 7)
+Completed 200 OK in 21ms (Views: 9.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=23&limit=1" for ::1 at 2015-02-25 15:46:01 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"23", "limit"=>"1"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 1 OFFSET 23[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=24&limit=1" for ::1 at 2015-02-25 15:46:11 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"24", "limit"=>"1"}
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.5ms)[0m  SELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 1 OFFSET 24
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505" for ::1 at 2015-02-25 15:46:26 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 20 OFFSET 0[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 1)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 2)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 3)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 4)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 5)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 6)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 7)
+Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505" for ::1 at 2015-02-25 15:47:10 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (1.6ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 20 OFFSET 0[0m
+  [1m[35mDoodle Load (0.4ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 1)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 2)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 3)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 4)[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 5)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 6)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 7)
+Completed 200 OK in 27ms (Views: 5.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505" for ::1 at 2015-02-25 15:47:21 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 2 OFFSET 0[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 1)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 2)[0m
+Completed 200 OK in 18ms (Views: 1.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505" for ::1 at 2015-02-25 15:47:25 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505"}
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.5ms)[0m  SELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 20 OFFSET 0
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 1)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 2)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 3)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 4)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 5)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 6)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 7)[0m
+Completed 200 OK in 25ms (Views: 7.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=2" for ::1 at 2015-02-25 15:48:09 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"2"}
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.6ms)[0m  SELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 2 OFFSET 0
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 1)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 2)
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=3&limit=2" for ::1 at 2015-02-25 15:48:13 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"3", "limit"=>"2"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 2 OFFSET 3[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 4)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 5)[0m
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=10" for ::1 at 2015-02-25 15:48:21 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"10"}
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.9ms)[0m  SELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 10 OFFSET 0
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 1)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 2)
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 3)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 4)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 5)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 6)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 7)[0m
+Completed 200 OK in 12ms (Views: 4.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 15:55:35 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" LIMIT 20 OFFSET 0
+Completed 200 OK in 89ms (Views: 78.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 15:56:11 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 15:56:19 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" LIMIT 20 OFFSET 0
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 15:56:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" LIMIT 20 OFFSET 0
+Completed 200 OK in 101ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 15:57:35 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 18ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=10" for ::1 at 2015-02-25 16:01:43 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"10"}
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.6ms)[0m  SELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 10 OFFSET 0
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 1)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 2)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 3)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 4)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 5)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 6)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 7)[0m
+Completed 200 OK in 80ms (Views: 4.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=16" for ::1 at 2015-02-25 16:01:49 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"16"}
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.7ms)[0m  SELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 16 OFFSET 0
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 1)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 2)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 3)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 4)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 5)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 6)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 7)[0m
+Completed 200 OK in 13ms (Views: 5.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=6" for ::1 at 2015-02-25 16:01:52 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"6"}
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.5ms)[0m  SELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 6 OFFSET 0
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 1)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 2)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 3)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 4)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 5)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 6)
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/locations.json" for ::1 at 2015-02-25 16:03:08 +0100
+Processing by Api::DoodlesController#getAllLocations as JSON
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "end_users"[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "doodles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.se' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."authkey" = ? LIMIT 1[0m  [["authkey", "25055f7efc2aeaf290265908dee8cbd6"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "webbsite_url", "website_name", "is_user_admin", "created_at", "updated_at", "authkey") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "admin@admin.se"], ["password_digest", "$2a$10$RI9qSO4K8tdwstiI3F2BZONvYEQXXXNMvX8BBZAzAAnT4ne1wRBYq"], ["webbsite_url", "www.hejhej.se"], ["website_name", "hejhej-siten"], ["is_user_admin", "t"], ["created_at", "2015-02-25 15:04:18.937710"], ["updated_at", "2015-02-25 15:04:18.937710"], ["authkey", "25055f7efc2aeaf290265908dee8cbd6"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej@hej.se"], ["password_digest", "$2a$10$0dC8KVeKOZ8Ltk73CX22Suq63LmV2/t18jQN07DWn7UG5ldwt3IyO"], ["username", "hejhej"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:04:19.034589"], ["updated_at", "2015-02-25 15:04:19.034589"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej2@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej2@hej.se"], ["password_digest", "$2a$10$bXdFv8m/.YDxaT.61He73eB7Nf0ckM1TanmA4d/5RvhUA7jjgpUty"], ["username", "hejhej2"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:04:19.122640"], ["updated_at", "2015-02-25 15:04:19.122640"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "Malmö Doodle"], ["created_at", "2015-02-25 15:04:19.128904"], ["updated_at", "2015-02-25 15:04:19.128904"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 15:04:19.139419"], ["updated_at", "2015-02-25 15:04:19.139419"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mEndUser Load (0.4ms)[0m  SELECT  "end_users".* FROM "end_users"  ORDER BY "end_users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "doodles" SET "end_user_id" = ?, "updated_at" = ? WHERE "doodles"."id" = ?  [["end_user_id", 10], ["updated_at", "2015-02-25 15:04:19.200175"], ["id", 26]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "hejhej doodle text till user 2"], ["created_at", "2015-02-25 15:04:19.203554"], ["updated_at", "2015-02-25 15:04:19.203554"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mEndUser Load (0.2ms)[0m  [1mSELECT  "end_users".* FROM "end_users"  ORDER BY "end_users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "doodles" SET "end_user_id" = ?, "updated_at" = ? WHERE "doodles"."id" = ?[0m  [["end_user_id", 11], ["updated_at", "2015-02-25 15:04:19.207755"], ["id", 27]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "end_users"[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "doodles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.se' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."authkey" = ? LIMIT 1[0m  [["authkey", "153cf39dbb1c8f5cfb7d8f5666869d76"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "webbsite_url", "website_name", "is_user_admin", "created_at", "updated_at", "authkey") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "admin@admin.se"], ["password_digest", "$2a$10$WToioUx1ZH9KYlWyM5RhleC1Ds5eU2ntBD76xy6UfMmhb9t2k9JOO"], ["webbsite_url", "www.hejhej.se"], ["website_name", "hejhej-siten"], ["is_user_admin", "t"], ["created_at", "2015-02-25 15:06:32.130708"], ["updated_at", "2015-02-25 15:06:32.130708"], ["authkey", "153cf39dbb1c8f5cfb7d8f5666869d76"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej@hej.se"], ["password_digest", "$2a$10$seogFZwZ.rARtUJymEqtZ.weK6M4dj3zdBiEsUmi8l5zgT25GDjZO"], ["username", "hejhej"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:06:32.253197"], ["updated_at", "2015-02-25 15:06:32.253197"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej2@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej2@hej.se"], ["password_digest", "$2a$10$DmsRxC1I7fusunMWfgNrj.Zdwz/A/yx8NMNz3zy7Y1IepDgZynQHq"], ["username", "hejhej2"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:06:32.347011"], ["updated_at", "2015-02-25 15:06:32.347011"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "Malmö Doodle"], ["created_at", "2015-02-25 15:06:32.355085"], ["updated_at", "2015-02-25 15:06:32.355085"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 15:06:32.365856"], ["updated_at", "2015-02-25 15:06:32.365856"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "end_users"[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "doodles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.se' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."authkey" = ? LIMIT 1[0m  [["authkey", "a961b644c8315909a66d3c73463f045d"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "webbsite_url", "website_name", "is_user_admin", "created_at", "updated_at", "authkey") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "admin@admin.se"], ["password_digest", "$2a$10$EpCl4P1TJOs178RxLNHRK.GgFqSWFZ7qu8O521EngX4kKEN8NFl72"], ["webbsite_url", "www.hejhej.se"], ["website_name", "hejhej-siten"], ["is_user_admin", "t"], ["created_at", "2015-02-25 15:06:52.016782"], ["updated_at", "2015-02-25 15:06:52.016782"], ["authkey", "a961b644c8315909a66d3c73463f045d"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej@hej.se"], ["password_digest", "$2a$10$QkxWDLQWCu1urpeZKy3fH.iUakLVWex5j/SvO.ENzUxfyWjPsbiWu"], ["username", "hejhej"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:06:52.122620"], ["updated_at", "2015-02-25 15:06:52.122620"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej2@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej2@hej.se"], ["password_digest", "$2a$10$SGv8ViHOUP0XpevnbDI36e2BJaVBVpbRVviClUaoErUs0oEvOaWNa"], ["username", "hejhej2"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:06:52.236991"], ["updated_at", "2015-02-25 15:06:52.236991"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "Malmö Doodle"], ["created_at", "2015-02-25 15:06:52.251360"], ["updated_at", "2015-02-25 15:06:52.251360"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 15:06:52.260698"], ["updated_at", "2015-02-25 15:06:52.260698"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.1ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.4ms)[0m  [1mDELETE FROM "end_users"[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "doodles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.se' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."authkey" = ? LIMIT 1[0m  [["authkey", "57e559353667a42dd5b5961d7fee6884"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "webbsite_url", "website_name", "is_user_admin", "created_at", "updated_at", "authkey") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "admin@admin.se"], ["password_digest", "$2a$10$A8g/ahsXsgm28qCTwcyXhelUgKLefzVe01Z0j4g33zdIdDr63K5FK"], ["webbsite_url", "www.hejhej.se"], ["website_name", "hejhej-siten"], ["is_user_admin", "t"], ["created_at", "2015-02-25 15:07:39.034497"], ["updated_at", "2015-02-25 15:07:39.034497"], ["authkey", "57e559353667a42dd5b5961d7fee6884"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej@hej.se"], ["password_digest", "$2a$10$c0W9MCPYGj4cJy.11NxrO.fk3R.nAmXwT83up0H1VKhajWZFkVNMu"], ["username", "hejhej"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:07:39.140398"], ["updated_at", "2015-02-25 15:07:39.140398"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej2@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej2@hej.se"], ["password_digest", "$2a$10$FUD5DENTKDZWaPV7s0lqlehGFqbHjrTU/WC7xO1bad4tcOpAaQC2e"], ["username", "hejhej2"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:07:39.229114"], ["updated_at", "2015-02-25 15:07:39.229114"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "Malmö Doodle"], ["created_at", "2015-02-25 15:07:39.235010"], ["updated_at", "2015-02-25 15:07:39.235010"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 15:07:39.243274"], ["updated_at", "2015-02-25 15:07:39.243274"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.4ms)[0m  [1mDELETE FROM "end_users"[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "doodles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.se' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."authkey" = ? LIMIT 1[0m  [["authkey", "28f1061b3c735660e2fd42f25eb78879"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("email", "password_digest", "webbsite_url", "website_name", "is_user_admin", "created_at", "updated_at", "authkey") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "admin@admin.se"], ["password_digest", "$2a$10$CyOpvwbpVqBonoCuZZCeBOiJ0ZzaFUbwKNpR3hjMxdtAJnCMapDru"], ["webbsite_url", "www.hejhej.se"], ["website_name", "hejhej-siten"], ["is_user_admin", "t"], ["created_at", "2015-02-25 15:08:34.154120"], ["updated_at", "2015-02-25 15:08:34.154120"], ["authkey", "28f1061b3c735660e2fd42f25eb78879"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej@hej.se"], ["password_digest", "$2a$10$h7QV0Rj752qAVYPHcmXAB.j4JKisgOpTPaFcn6aAVCE41bvpsHjqy"], ["username", "hejhej"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:08:34.249763"], ["updated_at", "2015-02-25 15:08:34.249763"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej2@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej2@hej.se"], ["password_digest", "$2a$10$gYfXDhnZKUX0gVtbjHVa9uoHGE/djP4ahamMOGXiu9pQpQQ6Zfjai"], ["username", "hejhej2"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:08:34.326120"], ["updated_at", "2015-02-25 15:08:34.326120"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "Malmö Doodle"], ["created_at", "2015-02-25 15:08:34.333239"], ["updated_at", "2015-02-25 15:08:34.333239"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 15:08:34.345149"], ["updated_at", "2015-02-25 15:08:34.345149"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."doodle_id" = ? LIMIT 1  [["doodle_id", 31]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "end_users"[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "doodles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.se' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."authkey" = ? LIMIT 1[0m  [["authkey", "951599387b2d4a7f72047e0bb502f1bd"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "webbsite_url", "website_name", "is_user_admin", "created_at", "updated_at", "authkey") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "admin@admin.se"], ["password_digest", "$2a$10$HCPuC1HRpjBwWJ5yDes23ufvEVrYMiqP2Ee4fjwnBB398m4FRlSce"], ["webbsite_url", "www.hejhej.se"], ["website_name", "hejhej-siten"], ["is_user_admin", "t"], ["created_at", "2015-02-25 15:10:55.663375"], ["updated_at", "2015-02-25 15:10:55.663375"], ["authkey", "951599387b2d4a7f72047e0bb502f1bd"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej@hej.se"], ["password_digest", "$2a$10$8155rrJSD6VxznF7HRvP0OoINdvONvx4I8jgFOVbbMT.txdhzdn26"], ["username", "hejhej"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:10:55.775191"], ["updated_at", "2015-02-25 15:10:55.775191"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej2@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej2@hej.se"], ["password_digest", "$2a$10$Kyo.NrIHQNIKZEm6fjf9GOG2aj.vjYjGLnNkTuJSl08lWdj1kENAO"], ["username", "hejhej2"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:10:55.879575"], ["updated_at", "2015-02-25 15:10:55.879575"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "Malmö Doodle"], ["created_at", "2015-02-25 15:10:55.887904"], ["updated_at", "2015-02-25 15:10:55.887904"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 15:10:55.901398"], ["updated_at", "2015-02-25 15:10:55.901398"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "end_users"[0m
+  [1m[35mSQL (8.6ms)[0m  DELETE FROM "doodles"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.se' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."authkey" = ? LIMIT 1[0m  [["authkey", "fe1a13ba216e42ed1223be2cc74d22f0"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "webbsite_url", "website_name", "is_user_admin", "created_at", "updated_at", "authkey") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["email", "admin@admin.se"], ["password_digest", "$2a$10$QyqKDYXF1.KwfMRm65Aksu92bYxRFGtPLn2BVriL78X12vouckR0O"], ["webbsite_url", "www.hejhej.se"], ["website_name", "hejhej-siten"], ["is_user_admin", "t"], ["created_at", "2015-02-25 15:11:32.885031"], ["updated_at", "2015-02-25 15:11:32.885031"], ["authkey", "fe1a13ba216e42ed1223be2cc74d22f0"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej@hej.se"], ["password_digest", "$2a$10$kT10Ts.3T0kuUBowkWQyxu4YEW5oYYU5uP6yEX2iPnPGMAkZsqXBC"], ["username", "hejhej"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:11:32.980644"], ["updated_at", "2015-02-25 15:11:32.980644"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej2@hej.se' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "hej2@hej.se"], ["password_digest", "$2a$10$gioLrWwLit8yqAVVFXaUPu/q62M7KFCA9J1Keboe34VEByL1oSbya"], ["username", "hejhej2"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:11:33.058191"], ["updated_at", "2015-02-25 15:11:33.058191"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "Malmö Doodle"], ["created_at", "2015-02-25 15:11:33.065595"], ["updated_at", "2015-02-25 15:11:33.065595"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 15:11:33.074336"], ["updated_at", "2015-02-25 15:11:33.074336"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mEndUser Load (0.1ms)[0m  SELECT  "end_users".* FROM "end_users"  ORDER BY "end_users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "doodles" SET "location_id" = ?, "end_user_id" = ?, "updated_at" = ? WHERE "doodles"."id" = ?  [["location_id", 14], ["end_user_id", 22], ["updated_at", "2015-02-25 15:11:33.091654"], ["id", 33]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["doodle_text", "Düsseldorf doodle"], ["created_at", "2015-02-25 15:11:33.095871"], ["updated_at", "2015-02-25 15:11:33.095871"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 51.234842], ["lng", 6.779505], ["created_at", "2015-02-25 15:11:33.098914"], ["updated_at", "2015-02-25 15:11:33.098914"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mEndUser Load (0.1ms)[0m  SELECT  "end_users".* FROM "end_users"  ORDER BY "end_users"."id" DESC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "doodles" SET "location_id" = ?, "end_user_id" = ?, "updated_at" = ? WHERE "doodles"."id" = ?  [["location_id", 15], ["end_user_id", 23], ["updated_at", "2015-02-25 15:11:33.102288"], ["id", 34]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/api/locations.json" for ::1 at 2015-02-25 16:11:49 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#getAllLocations as JSON
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.6ms)[0m  SELECT "locations".* FROM "locations"
+Completed 200 OK in 109ms (Views: 14.9ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "end_users"[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "doodles"
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "locations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.se' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."authkey" = ? LIMIT 1  [["authkey", "0e95d21c195cf5f2f8303d639e925019"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "webbsite_url", "website_name", "is_user_admin", "created_at", "updated_at", "authkey") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "admin@admin.se"], ["password_digest", "$2a$10$OLMM8fbnprzPb9NOTxY8X.cdOyhm4MvIDcUOttxM6G6ApdyirN73W"], ["webbsite_url", "www.hejhej.se"], ["website_name", "hejhej-siten"], ["is_user_admin", "t"], ["created_at", "2015-02-25 15:12:08.301964"], ["updated_at", "2015-02-25 15:12:08.301964"], ["authkey", "0e95d21c195cf5f2f8303d639e925019"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEndUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej@hej.se' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "hej@hej.se"], ["password_digest", "$2a$10$a82LKWVi14V78ToZilgL0uzNZvuEGVrRg8SH8pbXNRvCVjZUZ2XpO"], ["username", "hejhej"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:12:08.401523"], ["updated_at", "2015-02-25 15:12:08.401523"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEndUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hej2@hej.se' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "end_users" ("email", "password_digest", "username", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "hej2@hej.se"], ["password_digest", "$2a$10$jhq87gfQajoZbPMXSzY8LeZpeLr9PNf74JI7IwGmOmF8yX9hCORSi"], ["username", "hejhej2"], ["bio_text", "hejhej bio text"], ["created_at", "2015-02-25 15:12:08.478663"], ["updated_at", "2015-02-25 15:12:08.478663"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)  [["doodle_text", "Malmö Doodle"], ["created_at", "2015-02-25 15:12:08.489360"], ["updated_at", "2015-02-25 15:12:08.489360"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-25 15:12:08.496894"], ["updated_at", "2015-02-25 15:12:08.496894"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mEndUser Load (0.1ms)[0m  [1mSELECT  "end_users".* FROM "end_users"  ORDER BY "end_users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "doodles" SET "location_id" = ?, "end_user_id" = ?, "updated_at" = ? WHERE "doodles"."id" = ?[0m  [["location_id", 16], ["end_user_id", 24], ["updated_at", "2015-02-25 15:12:08.559398"], ["id", 35]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "doodles" ("doodle_text", "created_at", "updated_at") VALUES (?, ?, ?)  [["doodle_text", "Düsseldorf doodle"], ["created_at", "2015-02-25 15:12:08.563834"], ["updated_at", "2015-02-25 15:12:08.563834"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 51.234842], ["lng", 6.779505], ["created_at", "2015-02-25 15:12:08.566605"], ["updated_at", "2015-02-25 15:12:08.566605"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mEndUser Load (0.2ms)[0m  [1mSELECT  "end_users".* FROM "end_users"  ORDER BY "end_users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "doodles" SET "location_id" = ?, "end_user_id" = ?, "updated_at" = ? WHERE "doodles"."id" = ?[0m  [["location_id", 17], ["end_user_id", 25], ["updated_at", "2015-02-25 15:12:08.570648"], ["id", 36]]
+  [1m[35m (0.6ms)[0m  commit transaction
+
+
+Started GET "/api/locations.json" for ::1 at 2015-02-25 16:12:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#getAllLocations as JSON
+Geokit is using the domain: localhost
+  [1m[35mLocation Load (0.5ms)[0m  SELECT "locations".* FROM "locations"
+Completed 200 OK in 91ms (Views: 8.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=6" for ::1 at 2015-02-25 16:12:41 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"6"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (1.3ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 6 OFFSET 0[0m
+  [1m[35mDoodle Load (0.5ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 16)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 17)[0m
+Completed 200 OK in 31ms (Views: 7.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-25 16:12:52 +0100
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" LIMIT 20 OFFSET 0
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=1" for ::1 at 2015-02-25 16:12:57 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"1"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 1 OFFSET 0[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 16)
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=2" for ::1 at 2015-02-25 16:13:00 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"2"}
+Geokit is using the domain: localhost
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 650))  ORDER BY "locations"."created_at" ASC LIMIT 2 OFFSET 0[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (location_id = 16)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (location_id = 17)[0m
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 1.4ms)

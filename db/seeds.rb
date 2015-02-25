@@ -11,15 +11,19 @@
 User.delete_all
 EndUser.delete_all
 Doodle.delete_all
-
+Location.delete_all
 
 u1 = User.create(email: "admin@admin.se", password: "hejhej", password_confirmation: "hejhej", webbsite_url: "www.hejhej.se", website_name: "hejhej-siten", is_user_admin: true)
 
 EndUser.create(email: "hej@hej.se", password: "hejhej", password_confirmation: "hejhej", username: "hejhej", bio_text: "hejhej bio text")
 EndUser.create(email: "hej2@hej.se", password: "hejhej", password_confirmation: "hejhej", username: "hejhej2", bio_text: "hejhej bio text")
 
-d = Doodle.create(doodle_text: "hejhej doodle text")
+d = Doodle.create(doodle_text: "Malmö Doodle")
+l = Location.create(lat: 55.609613, lng: 13.000892)
+d.location_id = l.id
 EndUser.first.doodles << d
 
-d = Doodle.create(doodle_text: "hejhej doodle text till user 2")
+d = Doodle.create(doodle_text: "Düsseldorf doodle")
+l = Location.create(lat: 51.234842, lng: 6.779505)
+d.location_id = l.id
 EndUser.last.doodles << d
