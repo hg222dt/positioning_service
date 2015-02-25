@@ -12,6 +12,7 @@ User.delete_all
 EndUser.delete_all
 Doodle.delete_all
 Location.delete_all
+Tag.delete_all
 
 u1 = User.create(email: "admin@admin.se", password: "hejhej", password_confirmation: "hejhej", webbsite_url: "www.hejhej.se", website_name: "hejhej-siten", is_user_admin: true)
 
@@ -27,3 +28,10 @@ d = Doodle.create(doodle_text: "Düsseldorf doodle")
 l = Location.create(lat: 51.234842, lng: 6.779505)
 d.location_id = l.id
 EndUser.last.doodles << d
+
+
+
+Tag.create(name: "working")
+Tag.create(name: "hangin out")
+Tag.create(name: "strowling")
+Tag.create(name: "saving the world")

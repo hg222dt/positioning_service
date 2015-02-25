@@ -53,6 +53,8 @@ Rails.application.routes.draw do
       post 'user' => 'end_users#create', as: :user_create
 
       get 'locations' => 'doodles#getAllLocations', as: :locations
+
+      get 'tags' => 'tags#index', as: :tags
     
     end
 

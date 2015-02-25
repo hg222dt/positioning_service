@@ -22,16 +22,25 @@ module Api
 
 				respond_with :api, @doodles
 			else
-		  	@doodles = Doodle.all.limit(@limit).offset(@offset)
+		  	@doodles = Doodle.all.limit(@limit).offset(@offset).order(created_at: :desc)
 		    respond_with :api, @doodles
 		  end
 	  end
 
 	  def create
 
+
+# Om inte taggen hittas bör felmeddelande skickas
+# Eventuellt gör om det så att taggar alltid skrivs unikt av användaren och att det skapas nya i databasen om taggen inte finns
+
+	  	@tag = Tag.where("name = ?", params[:tag_name]).first
+
+
+
 	  	@doodle = Doodle.new
 	  	@doodle.doodle_text = params[:doodle_text]
 	  	@doodle.end_user_id = params[:end_user_id]
+	  	@doodle.tag = @tag
 	  	@doodle.location = Location.new(lat: params[:lat], lng: params[:long])
 	  	@doodle.save
 

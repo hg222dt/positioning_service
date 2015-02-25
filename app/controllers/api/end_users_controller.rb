@@ -8,7 +8,7 @@ module Api
 
 		def getUsersDoodles
 
-			@doodles = Doodle.where("end_user_id = ?", params[:end_user_id]).order(:created_at).all.limit(@limit).offset(@offset);
+			@doodles = Doodle.where("end_user_id = ?", params[:end_user_id]).order(:created_at).all.limit(@limit).offset(@offset)
 		
 			# $doodles = EndUser.find(params[:end_user_id]).doodles
 
