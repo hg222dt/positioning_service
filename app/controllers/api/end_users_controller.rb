@@ -4,7 +4,7 @@ module Api
 		respond_to :json, :xml
 
 		before_action :offset_params
-
+		before_action :api_authenticate
 
 		def getUsersDoodles
 
@@ -17,6 +17,7 @@ module Api
 		end
 
 		def create
+
 			@end_user = EndUser.new(end_user_params);
 
 

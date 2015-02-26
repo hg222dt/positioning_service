@@ -38142,3 +38142,594 @@ Geokit is using the domain: localhost
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["doodle_text", "En doodle i malmöz"], ["end_user_id", 43], ["tag_id", 10], ["location_id", 36], ["created_at", "2015-02-26 16:24:15.039922"], ["updated_at", "2015-02-26 16:24:15.039922"]]
   [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
 Completed 201 Created in 12ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 17:45:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+Geokit is using the domain: localhost
+Filter chain halted as :checkApiKey rendered or redirected
+Completed 403 Forbidden in 21ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 17:46:13 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.8ms)[0m  [1mSELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 120ms (Views: 18.0ms | ActiveRecord: 3.3ms)
+
+
+Started PUT "/api/doodles/43.json" for ::1 at 2015-02-26 17:47:23 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "doodle_text": "HEPP HEPP HEPP HEPP HEPPZZZZZZ",
+}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{
+    "doodle_text": "HEPP HEPP HEPP HEPP HEPPZZZZZZ",
+}'):
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (33.9ms)
+
+
+Started PUT "/api/doodles/43.json" for ::1 at 2015-02-26 17:47:44 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"43", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = NULL LIMIT 1[0m
+Completed 404 Not Found in 19ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=id):
+  app/controllers/api/doodles_controller.rb:77:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (30.3ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 17:48:03 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/api/doodles/43.json" for ::1 at 2015-02-26 17:48:27 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"43", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = NULL LIMIT 1[0m
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=id):
+  app/controllers/api/doodles_controller.rb:77:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (80.0ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 17:48:54 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 17ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/api/doodles/33.json" for ::1 at 2015-02-26 17:49:07 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"33", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = NULL LIMIT 1[0m
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=id):
+  app/controllers/api/doodles_controller.rb:77:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (62.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (86.2ms)
+
+
+Started GET "/api/doodles.json?q=doodle" for ::1 at 2015-02-26 17:49:25 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"q"=>"doodle"}
+Geokit is using the domain: localhost
+Filter chain halted as :checkApiKey rendered or redirected
+Completed 403 Forbidden in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/doodles.json?range=650&lat=51.234842&long=6.779505&offset=0&limit=2" for ::1 at 2015-02-26 17:49:27 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"range"=>"650", "lat"=>"51.234842", "long"=>"6.779505", "offset"=>"0", "limit"=>"2"}
+Geokit is using the domain: localhost
+Filter chain halted as :checkApiKey rendered or redirected
+Completed 403 Forbidden in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/api/doodles/33.json" for ::1 at 2015-02-26 17:50:02 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"33", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.7ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 43]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "doodles" SET "doodle_text" = ?, "updated_at" = ? WHERE "doodles"."id" = ?[0m  [["doodle_text", "HEPP HEPP HEPP HEPP HEPPZZZZZZ"], ["updated_at", "2015-02-26 16:50:02.509998"], ["id", 43]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 204 No Content in 43ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 17:50:09 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.4ms)[0m  SELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0
+Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/api/doodles/33.json" for ::1 at 2015-02-26 17:51:33 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"33", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 33]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "doodles" SET "doodle_text" = ?, "updated_at" = ? WHERE "doodles"."id" = ?  [["doodle_text", "HEPP HEPP HEPP HEPP HEPPZZZZZZ"], ["updated_at", "2015-02-26 16:51:33.732938"], ["id", 33]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 37ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 17:51:55 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.4ms)[0m  [1mSELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 16ms (Views: 8.7ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/api/doodles/32.json" for ::1 at 2015-02-26 17:53:54 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"32", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 32]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "doodles" SET "doodle_text" = ?, "updated_at" = ? WHERE "doodles"."id" = ?[0m  [["doodle_text", "HEPP HEPP HEPP HEPP HEPPZZZZZZ"], ["updated_at", "2015-02-26 16:53:54.515014"], ["id", 32]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 40ms (ActiveRecord: 3.6ms)
+
+
+Started PUT "/api/doodles/31.json" for ::1 at 2015-02-26 17:58:00 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"31", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 31]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "doodles" SET "doodle_text" = ?, "updated_at" = ? WHERE "doodles"."id" = ?  [["doodle_text", "HEPP HEPP HEPP HEPP HEPPZZZZZZ"], ["updated_at", "2015-02-26 16:58:00.740336"], ["id", 31]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 103ms (ActiveRecord: 3.1ms)
+
+
+Started DELETE "/api/doodles/31.json" for ::1 at 2015-02-26 17:59:25 +0100
+Processing by Api::DoodlesController#destroy as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"31", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 500 Internal Server Error in 20ms
+
+NoMethodError (undefined method `destory' for #<Class:0x007ffdeec404c0>):
+  app/controllers/api/doodles_controller.rb:85:in `destroy'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (33.6ms)
+
+
+Started DELETE "/api/doodles/31.json" for ::1 at 2015-02-26 18:00:38 +0100
+Processing by Api::DoodlesController#destroy as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"31", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 31]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "doodles" WHERE "doodles"."id" = ?  [["id", 31]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 88ms
+
+ActionView::MissingTemplate (Missing template api/doodles/destroy, application/destroy with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates"
+  * "/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/missing_template.html.erb within rescues/layout (25.2ms)
+
+
+Started DELETE "/api/doodles/31.json" for ::1 at 2015-02-26 18:02:11 +0100
+Processing by Api::DoodlesController#destroy as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"31", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 31]]
+Completed 404 Not Found in 21ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=31):
+  app/controllers/api/doodles_controller.rb:85:in `destroy'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 18:02:22 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.4ms)[0m  [1mSELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 89ms (Views: 18.5ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/doodles/41.json" for ::1 at 2015-02-26 18:02:43 +0100
+Processing by Api::DoodlesController#destroy as JSON
+  Parameters: {"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ", "id"=>"41", "doodle"=>{"doodle_text"=>"HEPP HEPP HEPP HEPP HEPPZZZZZZ"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "doodles" WHERE "doodles"."id" = ?[0m  [["id", 41]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 18:02:54 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.4ms)[0m  SELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0
+Completed 200 OK in 19ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/api/doodles/41.json" for ::1 at 2015-02-26 18:04:57 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"lol", "id"=>"41", "doodle"=>{"doodle_text"=>"lol"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 41]]
+Completed 404 Not Found in 22ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=41):
+  app/controllers/api/doodles_controller.rb:77:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+
+
+Started PUT "/api/doodles/43.json" for ::1 at 2015-02-26 18:05:11 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"lol", "id"=>"43", "doodle"=>{"doodle_text"=>"lol"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 43]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "doodles" SET "doodle_text" = ?, "updated_at" = ? WHERE "doodles"."id" = ?  [["doodle_text", "lol"], ["updated_at", "2015-02-26 17:05:11.018724"], ["id", 43]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 18:05:16 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (1.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 20ms (Views: 10.0ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/api/doodles/41.json" for ::1 at 2015-02-26 18:06:50 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"lol", "id"=>"41", "doodle"=>{"doodle_text"=>"lol"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 41]]
+Completed 404 Not Found in 25ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=41):
+  app/controllers/api/doodles_controller.rb:78:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (25.2ms)
+
+
+Started PUT "/api/doodles/41.json" for ::1 at 2015-02-26 18:08:25 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"lol", "id"=>"41", "doodle"=>{"doodle_text"=>"lol"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 41]]
+Completed 404 Not Found in 23ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=41):
+  app/controllers/api/doodles_controller.rb:77:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (27.9ms)
+
+
+Started PUT "/api/doodles/41.json" for ::1 at 2015-02-26 18:10:29 +0100
+
+SyntaxError (/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:81: syntax error, unexpected keyword_rescue, expecting keyword_end
+	  			rescue => error
+	  			      ^):
+  app/controllers/api/doodles_controller.rb:81: syntax error, unexpected keyword_rescue, expecting keyword_end
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (58.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (88.6ms)
+
+
+Started PUT "/api/doodles/41.json" for ::1 at 2015-02-26 18:11:41 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"lol", "id"=>"41", "doodle"=>{"doodle_text"=>"lol"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 41]]
+Completed 400 Bad Request in 25ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/api/doodles/41.json" for ::1 at 2015-02-26 18:11:52 +0100
+
+SyntaxError (/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:85: syntax error, unexpected keyword_end, expecting '}'
+/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:107: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/api/doodles_controller.rb:85: syntax error, unexpected keyword_end, expecting '}'
+  app/controllers/api/doodles_controller.rb:107: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+
+
+Started PUT "/api/doodles/41.json" for ::1 at 2015-02-26 18:12:16 +0100
+
+SyntaxError (/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:85: syntax error, unexpected keyword_end, expecting '}'
+/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:107: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/api/doodles_controller.rb:85: syntax error, unexpected keyword_end, expecting '}'
+  app/controllers/api/doodles_controller.rb:107: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (83.6ms)
+
+
+Started PUT "/api/doodles/41.json" for ::1 at 2015-02-26 18:12:35 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"lol", "id"=>"41", "doodle"=>{"doodle_text"=>"lol"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 41]]
+Completed 400 Bad Request in 30ms (Views: 1.7ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/api/doodles/41.json" for ::1 at 2015-02-26 18:12:45 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"lol", "id"=>"41", "doodle"=>{"doodle_text"=>"lol"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 41]]
+Completed 400 Bad Request in 19ms (Views: 0.3ms | ActiveRecord: 1.2ms)

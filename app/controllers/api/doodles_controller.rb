@@ -62,7 +62,7 @@ module Api
 	  end
 
 	  def show
-		  @doodle = Doodle.find(params[:id]);
+		  @doodle = Doodle.find(params[:id])
 	  	respond_with :api, @doodle
 	  end
 
@@ -75,14 +75,24 @@ module Api
 	  def update
 	  	if api_authenticate
 
-	  	end
+		  		@doodle = Doodle.update(params[:id], doodle_text: params[:doodle_text])
+	  			render json: { message: 'Object seccessfully updated' }, status: :ok # The header isn´t present
+			end
+
+			rescue => error
+				render json: { message: 'Object not found'}, status: :bad_request 
+
 	  end
 
 
 	  def destroy
 	  	if api_authenticate
-	  		
+	  		Doodle.destroy(params[:id])
+	  		render json: { message: 'Object seccessfully removed' }, status: :ok # The header isn´t present
 	  	end
+
+  		rescue => error
+				render json: { message: 'Object not found'}, status: :bad_request 
 	  end
 	  
 
