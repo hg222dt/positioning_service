@@ -13,7 +13,7 @@ module Api
 
 	  	if @query
 
-	  		@doodle = Doodle.where("doodle_text LIKE ?", "%#{@query}%") 
+	  		@doodle = Doodle.select("*").joins(:location).where("doodle_text LIKE ?", "%#{@query}%") 
 	  		respond_with :api, @doodle
 
 	  	elsif params[:lat].present? and params[:long].present? and params[:range].present?
@@ -26,12 +26,12 @@ module Api
 		  	@doodles = []
 
 		  	@locations.each do |loc|
-		  		@doodles << Doodle.where("location_id = ?", loc.id)
+		  		@doodles << Doodle.select("*").joins(:location).where("location_id = ?", loc.id)
 				end
 
 				respond_with :api, @doodles
 			else
-		  	@doodles = Doodle.all.limit(@limit).offset(@offset).order(created_at: :desc)
+		  	@doodles = Doodle.select("*").joins(:location).all.limit(@limit).offset(@offset).order(created_at: :desc)
 		    respond_with :api, @doodles
 		  end
 	  end
@@ -53,8 +53,6 @@ module Api
 		  	@doodle.location = Location.new(lat: params[:lat], lng: params[:long])
 		  	@doodle.save
 
-		  	# @doodleLocation = Doodle.joins(:location).last
-
 		  	respond_with :api, @doodle
 
 		  end
@@ -62,7 +60,7 @@ module Api
 	  end
 
 	  def show
-		  @doodle = Doodle.find(params[:id])
+		  @doodle = Doodle.select("*").joins(:location).find(params[:id])
 	  	respond_with :api, @doodle
 	  end
 
@@ -116,6 +114,7 @@ module Api
 
 
 	  def doodles_by_tag
+
 	  	@tag = Tag.where("name = ?", params[:tag_name]).first
 
 	  	@doodles = Doodle.joins(:tag).where(:tags => {:name => @tag.name})

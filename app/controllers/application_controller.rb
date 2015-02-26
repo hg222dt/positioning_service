@@ -106,11 +106,6 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def checkUserAuth
-
-
-  end
-
   # authenticates users for unsafe methods
   def end_user_authenticate 
     if request.headers["Authorization"].present?

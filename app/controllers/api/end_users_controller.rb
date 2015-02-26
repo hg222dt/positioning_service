@@ -4,11 +4,15 @@ module Api
 		respond_to :json, :xml
 
 		before_action :offset_params
+# 
+# 
+# Fixa så att du inte behöver ha en api-nyckel för att hämta ut en. satsen under här gör så att så blir fallet.
+# 
 		# before_action :checkApiKey
 
 		def getUsersDoodles
 
-			@doodles = Doodle.where("end_user_id = ?", params[:end_user_id]).order(:created_at).all.limit(@limit).offset(@offset)
+			@doodles = Doodle.select("*").joins(:location).where("end_user_id = ?", params[:end_user_id]).order(:created_at).all.limit(@limit).offset(@offset)
 		
 			# $doodles = EndUser.find(params[:end_user_id]).doodles
 

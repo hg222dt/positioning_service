@@ -39791,3 +39791,178 @@ Geokit is using the domain: localhost
   [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1[0m
   [1m[35mDoodle Load (0.1ms)[0m  SELECT "doodles".* FROM "doodles" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE "tags"."name" = ?  [["name", "hepp"]]
 Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/api_auth.json" for ::1 at 2015-02-26 22:00:07 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::EndUsersController#api_auth as JSON
+  Parameters: {"email"=>"hej@hej.se", "password"=>"[FILTERED]", "end_user"=>{"email"=>"hej@hej.se"}}
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (0.6ms)[0m  SELECT  "end_users".* FROM "end_users" WHERE "end_users"."email" = ? LIMIT 1  [["email", "hej@hej.se"]]
+Completed 200 OK in 167ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/doodles_by_tag/hepp.json" for ::1 at 2015-02-26 22:00:45 +0100
+Processing by Api::DoodlesController#doodles_by_tag as JSON
+  Parameters: {"tag_name"=>"hepp", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Filter chain halted as :checkApiKey rendered or redirected
+Completed 400 Bad Request in 18ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/api_auth.json" for ::1 at 2015-02-26 22:01:32 +0100
+Processing by Api::EndUsersController#api_auth as JSON
+  Parameters: {"email"=>"hej@hej.se", "password"=>"[FILTERED]", "end_user"=>{"email"=>"hej@hej.se"}}
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (0.2ms)[0m  SELECT  "end_users".* FROM "end_users" WHERE "end_users"."email" = ? LIMIT 1  [["email", "hej@hej.se"]]
+Completed 200 OK in 76ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/doodles_by_tag/hepp.json" for ::1 at 2015-02-26 22:01:54 +0100
+Processing by Api::DoodlesController#doodles_by_tag as JSON
+  Parameters: {"tag_name"=>"hepp", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Filter chain halted as :checkApiKey rendered or redirected
+Completed 400 Bad Request in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/doodles_by_tag/hepp.json" for ::1 at 2015-02-26 22:03:26 +0100
+Processing by Api::DoodlesController#doodles_by_tag as JSON
+  Parameters: {"tag_name"=>"hepp", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1[0m
+  [1m[35mDoodle Load (0.6ms)[0m  SELECT "doodles".* FROM "doodles" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE "tags"."name" = ?  [["name", "hepp"]]
+Completed 200 OK in 108ms (Views: 19.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/doodles_by_tag/hepp.json" for ::1 at 2015-02-26 22:25:26 +0100
+Processing by Api::DoodlesController#doodles_by_tag as JSON
+  Parameters: {"tag_name"=>"hepp", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36mDoodle Load (0.7ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE "tags"."name" = ?[0m  [["name", "hepp"]]
+Completed 200 OK in 96ms (Views: 9.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 22:29:47 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+Filter chain halted as :checkApiKey rendered or redirected
+Completed 400 Bad Request in 13ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 22:30:03 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.9ms)[0m  SELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0
+Completed 200 OK in 115ms (Views: 85.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/doodles.json?lat=51.234842&long=6.779505&range=500" for ::1 at 2015-02-26 22:33:14 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"lat"=>"51.234842", "long"=>"6.779505", "range"=>"500", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mLocation Load (3.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 500))  ORDER BY "locations"."created_at" ASC LIMIT 20 OFFSET 0
+  [1m[36mDoodle Load (0.7ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 13)[0m
+Completed 200 OK in 57ms (Views: 8.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/doodles.json?lat=51.234842&long=6.779505&range=800" for ::1 at 2015-02-26 22:33:24 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"lat"=>"51.234842", "long"=>"6.779505", "range"=>"800", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 800))  ORDER BY "locations"."created_at" ASC LIMIT 20 OFFSET 0[0m
+  [1m[35mDoodle Load (0.4ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 12)
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 13)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 14)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 15)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 16)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 17)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 18)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 19)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 20)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 21)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 22)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 23)[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 24)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 25)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 26)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 27)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 28)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 29)[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 30)
+  [1m[36mDoodle Load (0.4ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 31)[0m
+Completed 200 OK in 38ms (Views: 24.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/doodles.json?lat=51.234842&long=6.779505&range=700" for ::1 at 2015-02-26 22:33:33 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"lat"=>"51.234842", "long"=>"6.779505", "range"=>"700", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mLocation Load (1.7ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 700))  ORDER BY "locations"."created_at" ASC LIMIT 20 OFFSET 0[0m
+  [1m[35mDoodle Load (0.5ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 12)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 13)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 14)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 15)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 16)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 17)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 18)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 19)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 20)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 21)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 22)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 23)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 24)
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 25)[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 26)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 27)[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 28)
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 29)[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 30)
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 31)[0m
+Completed 200 OK in 104ms (Views: 23.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/doodles.json?lat=51.234842&long=6.779505&range=600" for ::1 at 2015-02-26 22:33:39 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"lat"=>"51.234842", "long"=>"6.779505", "range"=>"600", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mLocation Load (1.5ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE ((
+          (CASE WHEN locations.lat IS NULL OR locations.lng IS NULL THEN NULL ELSE
+          (ACOS(least(1,COS(0.8942166846390766)*COS(0.11832468390541818)*COS(RADIANS(locations.lat))*COS(RADIANS(locations.lng))+
+          COS(0.8942166846390766)*SIN(0.11832468390541818)*COS(RADIANS(locations.lat))*SIN(RADIANS(locations.lng))+
+          SIN(0.8942166846390766)*SIN(RADIANS(locations.lat))))*6376.77271)
+          END)
+          <= 600))  ORDER BY "locations"."created_at" ASC LIMIT 20 OFFSET 0[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 13)
+Completed 200 OK in 12ms (Views: 2.4ms | ActiveRecord: 1.9ms)
