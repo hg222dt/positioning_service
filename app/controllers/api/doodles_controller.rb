@@ -13,7 +13,7 @@ module Api
 
 	  	if @query
 
-	  		@doodle = Doodle.select("*").joins(:location).where("doodle_text LIKE ?", "%#{@query}%") 
+	  		@doodle = Doodle.select("doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name").joins(:location).where("doodle_text LIKE ?", "%#{@query}%") 
 	  		respond_with :api, @doodle
 
 	  	elsif params[:lat].present? and params[:long].present? and params[:range].present?
@@ -26,12 +26,12 @@ module Api
 		  	@doodles = []
 
 		  	@locations.each do |loc|
-		  		@doodles << Doodle.select("*").joins(:location).where("location_id = ?", loc.id)
+		  		@doodles << Doodle.select("doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name").joins(:location).where("location_id = ?", loc.id)
 				end
 
 				respond_with :api, @doodles
 			else
-		  	@doodles = Doodle.select("*").joins(:location).all.limit(@limit).offset(@offset).order(created_at: :desc)
+		  	@doodles = Doodle.select("doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id").joins(:location).all.limit(@limit).offset(@offset).order(created_at: :desc)
 		    respond_with :api, @doodles
 		  end
 	  end
@@ -46,11 +46,14 @@ module Api
 		  		@tag = Tag.new(name: params[:tag_name])
 		  	end
 		  		
+		  	@location = Location.new(lat: params[:lat], lng: params[:long])
+		  	@location.save
+
 		  	@doodle = Doodle.new
 		  	@doodle.doodle_text = params[:doodle_text]
 		  	@doodle.end_user_id = params[:end_user_id]
 		  	@doodle.tag = @tag
-		  	@doodle.location = Location.new(lat: params[:lat], lng: params[:long])
+		  	@doodle.location = @location
 		  	@doodle.save
 
 		  	respond_with :api, @doodle
@@ -60,7 +63,7 @@ module Api
 	  end
 
 	  def show
-		  @doodle = Doodle.select("*").joins(:location).find(params[:id])
+		  @doodle = Doodle.select("doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id").joins(:location).where("doodles.id = ?", params[:id])
 	  	respond_with :api, @doodle
 	  end
 

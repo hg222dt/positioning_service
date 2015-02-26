@@ -39966,3 +39966,1167 @@ Geokit is using the domain: localhost
           <= 600))  ORDER BY "locations"."created_at" ASC LIMIT 20 OFFSET 0[0m
   [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (location_id = 13)
 Completed 200 OK in 12ms (Views: 2.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/api_auth.json" for ::1 at 2015-02-26 22:58:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (uninitialized constant Api::ApplicationController):
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:276:in `const_get'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:276:in `block in constantize'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:59:in `controller'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:38:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (12.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (24.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (115.7ms)
+
+
+Started POST "/api/api_auth.json" for ::1 at 2015-02-26 22:58:31 +0100
+Processing by Api::EndUsersController#api_auth as JSON
+  Parameters: {"email"=>"hej@hej.se", "password"=>"[FILTERED]", "end_user"=>{"email"=>"hej@hej.se"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mEndUser Load (0.5ms)[0m  [1mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."email" = ? LIMIT 1[0m  [["email", "hej@hej.se"]]
+Completed 200 OK in 136ms (Views: 0.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 23:56:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (1.4ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0[0m
+Completed 500 Internal Server Error in 134ms
+
+NoMethodError (undefined method `api_doodle_path' for #<Doodle:0x007f83f2a05780>):
+  app/models/doodle.rb:15:in `self_link'
+  app/models/doodle.rb:9:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:35:in `index'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (36.7ms)
+
+
+Started GET "/api/doodles/43.json" for ::1 at 2015-02-26 23:57:48 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"43", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 43]]
+Completed 500 Internal Server Error in 14ms
+
+NoMethodError (undefined method `api_doodle_path' for #<Doodle:0x007f83f80c1358>):
+  app/models/doodle.rb:15:in `self_link'
+  app/models/doodle.rb:9:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:64:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (29.3ms)
+
+
+Started GET "/api/doodles/44.json" for ::1 at 2015-02-26 23:57:54 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"44", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 44]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Doodle with 'id'=44):
+  app/controllers/api/doodles_controller.rb:63:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (23.4ms)
+
+
+Started GET "/api/doodles/34.json" for ::1 at 2015-02-26 23:58:03 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"34", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 34]]
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `api_doodle_path' for #<Doodle:0x007f83f8022348>):
+  app/models/doodle.rb:15:in `self_link'
+  app/models/doodle.rb:9:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:64:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (25.4ms)
+
+
+Started GET "/api/doodles/34.json" for ::1 at 2015-02-26 23:58:48 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"34", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.7ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 34]]
+Completed 500 Internal Server Error in 93ms
+
+NoMethodError (undefined method `api_doodle_path' for #<Doodle:0x007f83f58b2bf0>):
+  app/models/doodle.rb:15:in `self_link'
+  app/models/doodle.rb:9:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:64:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (23.4ms)
+
+
+Started GET "/api/doodles/34.json" for ::1 at 2015-02-27 00:00:09 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"34", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.7ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 34]]
+Completed 200 OK in 38ms (Views: 1.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/doodles/34.json" for ::1 at 2015-02-27 00:01:47 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"34", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 34]]
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/doodles/35.json" for ::1 at 2015-02-27 00:01:52 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"35", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 35]]
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/doodles/35.json" for ::1 at 2015-02-27 00:03:24 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"35", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.9ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 35]]
+Completed 200 OK in 42ms (Views: 1.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/doodles/35.json" for ::1 at 2015-02-27 00:03:38 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"35", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 35]]
+Completed 200 OK in 112ms (Views: 1.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-27 00:04:22 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.4ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/doodles/35.json" for ::1 at 2015-02-27 00:05:08 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"35", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.6ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "id"."id" = '35' LIMIT 1[0m
+SQLite3::SQLException: no such column: id.id: SELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "id"."id" = '35' LIMIT 1
+Completed 500 Internal Server Error in 33ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: id.id: SELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE "id"."id" = '35' LIMIT 1):
+  app/controllers/api/doodles_controller.rb:63:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+
+
+Started GET "/api/doodles/35.json" for ::1 at 2015-02-27 00:05:57 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"35", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (1.0ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (id = '35')[0m
+SQLite3::SQLException: ambiguous column name: id: SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (id = '35')
+Completed 500 Internal Server Error in 92ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: ambiguous column name: id: SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (id = '35')):
+  app/controllers/api/doodles_controller.rb:64:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.2ms)
+
+
+Started GET "/api/doodles/34.json" for ::1 at 2015-02-27 00:06:05 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"34", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (1.2ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (id = '34')[0m
+SQLite3::SQLException: ambiguous column name: id: SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (id = '34')
+Completed 500 Internal Server Error in 8ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: ambiguous column name: id: SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (id = '34')):
+  app/controllers/api/doodles_controller.rb:64:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (27.2ms)
+
+
+Started GET "/api/doodles/34.json" for ::1 at 2015-02-27 00:07:41 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"34", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.7ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodle.id = '34')[0m
+SQLite3::SQLException: no such column: doodle.id: SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodle.id = '34')
+Completed 500 Internal Server Error in 32ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: doodle.id: SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodle.id = '34')):
+  app/controllers/api/doodles_controller.rb:64:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.6ms)
+
+
+Started GET "/api/doodles/34.json" for ::1 at 2015-02-27 00:07:50 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"34", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '34')[0m
+Completed 200 OK in 89ms (Views: 8.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/doodles/43.json" for ::1 at 2015-02-27 00:08:28 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"43", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '43')[0m
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-27 00:08:33 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (1.0ms)[0m  [1mSELECT  * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0[0m
+Completed 200 OK in 21ms (Views: 13.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:10:21 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 400 Bad Request in 80ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/api_auth.json" for ::1 at 2015-02-27 00:12:25 +0100
+Processing by Api::EndUsersController#api_auth as JSON
+  Parameters: {"email"=>"hej@hej.se", "password"=>"[FILTERED]", "end_user"=>{"email"=>"hej@hej.se"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mEndUser Load (0.8ms)[0m  SELECT  "end_users".* FROM "end_users" WHERE "end_users"."email" = ? LIMIT 1  [["email", "hej@hej.se"]]
+Completed 200 OK in 86ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:13:31 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:13:31.467343"], ["updated_at", "2015-02-26 23:13:31.467343"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 39], ["created_at", "2015-02-26 23:13:31.470161"], ["updated_at", "2015-02-26 23:13:31.470161"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 201 Created in 52ms (Views: 2.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/doodles/46.json" for ::1 at 2015-02-27 00:14:05 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"46", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '46')
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/doodles/47.json" for ::1 at 2015-02-27 00:14:33 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"47", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '47')
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/doodles/46.json" for ::1 at 2015-02-27 00:14:37 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"46", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '46')
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:16:37 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:16:37.833061"], ["updated_at", "2015-02-26 23:16:37.833061"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 40], ["created_at", "2015-02-26 23:16:37.844378"], ["updated_at", "2015-02-26 23:16:37.844378"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 201 Created in 64ms (Views: 1.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/api/doodles/47.json" for ::1 at 2015-02-27 00:16:45 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"47", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.4ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '47')
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:17:19 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:17:19.319384"], ["updated_at", "2015-02-26 23:17:19.319384"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:17:19.332034"], ["updated_at", "2015-02-26 23:17:19.332034"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 42], ["created_at", "2015-02-26 23:17:19.333638"], ["updated_at", "2015-02-26 23:17:19.333638"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 56ms (Views: 1.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/api/doodles/48.json" for ::1 at 2015-02-27 00:17:26 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"48", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '48')[0m
+Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:17:32 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:17:32.392166"], ["updated_at", "2015-02-26 23:17:32.392166"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:17:32.395950"], ["updated_at", "2015-02-26 23:17:32.395950"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 44], ["created_at", "2015-02-26 23:17:32.397416"], ["updated_at", "2015-02-26 23:17:32.397416"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 201 Created in 15ms (Views: 0.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/doodles/49.json" for ::1 at 2015-02-27 00:17:41 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"49", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '49')
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:18:06 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:18:06.277534"], ["updated_at", "2015-02-26 23:18:06.277534"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 45], ["created_at", "2015-02-26 23:18:06.289908"], ["updated_at", "2015-02-26 23:18:06.289908"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 201 Created in 61ms (Views: 0.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/doodles/47.json" for ::1 at 2015-02-27 00:18:15 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"47", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '47')
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:18:28 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:18:28.059370"], ["updated_at", "2015-02-26 23:18:28.059370"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 46], ["created_at", "2015-02-26 23:18:28.065327"], ["updated_at", "2015-02-26 23:18:28.065327"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 201 Created in 16ms (Views: 0.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/doodles/51.json" for ::1 at 2015-02-27 00:18:38 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"51", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '51')
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:18:47 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:18:47.239278"], ["updated_at", "2015-02-26 23:18:47.239278"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 47], ["created_at", "2015-02-26 23:18:47.243899"], ["updated_at", "2015-02-26 23:18:47.243899"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Completed 201 Created in 15ms (Views: 0.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/doodles/52.json" for ::1 at 2015-02-27 00:18:56 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"52", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '52')
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:19:04 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:19:04.821255"], ["updated_at", "2015-02-26 23:19:04.821255"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 48], ["created_at", "2015-02-26 23:19:04.824066"], ["updated_at", "2015-02-26 23:19:04.824066"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 201 Created in 11ms (Views: 0.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/doodles/53.json" for ::1 at 2015-02-27 00:19:10 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"53", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '53')
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:20:12 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:20:12.767181"], ["updated_at", "2015-02-26 23:20:12.767181"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 49], ["created_at", "2015-02-26 23:20:12.778564"], ["updated_at", "2015-02-26 23:20:12.778564"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 201 Created in 50ms (Views: 0.9ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-27 00:20:24 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 23:20:24.909860"], ["updated_at", "2015-02-26 23:20:24.909860"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 50], ["created_at", "2015-02-26 23:20:24.914024"], ["updated_at", "2015-02-26 23:20:24.914024"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 201 Created in 13ms (Views: 0.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:20:33 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT * FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:24:23 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT "doodles".* FROM "doodles" WHERE (doodles.id = '55')
+Completed 200 OK in 34ms (Views: 5.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:24:39 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT doodles.id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+Completed 200 OK in 98ms (Views: 11.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:24:51 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT doodles.id, doodles.doodle_text FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+Completed 200 OK in 90ms (Views: 70.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:26:25 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.6ms)[0m  SELECT doodles.id, doodles.doodle_text, location.lat, location.long FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+SQLite3::SQLException: no such column: location.lat: SELECT doodles.id, doodles.doodle_text, location.lat, location.long FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+Completed 500 Internal Server Error in 31ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: location.lat: SELECT doodles.id, doodles.doodle_text, location.lat, location.long FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')):
+  app/controllers/api/doodles_controller.rb:67:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:26:39 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+Completed 200 OK in 30ms (Views: 8.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:28:09 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 35ms
+
+ActiveRecord::ConfigurationError (Association named 'user' was not found on Doodle; perhaps you misspelled it?):
+  app/controllers/api/doodles_controller.rb:67:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (10.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (34.3ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:28:45 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.8ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "users" ON "users"."id" = "doodles"."user_id" WHERE (doodles.id = '55')[0m
+SQLite3::SQLException: no such column: doodles.user_id: SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "users" ON "users"."id" = "doodles"."user_id" WHERE (doodles.id = '55')
+Completed 500 Internal Server Error in 97ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: doodles.user_id: SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "users" ON "users"."id" = "doodles"."user_id" WHERE (doodles.id = '55')):
+  app/controllers/api/doodles_controller.rb:67:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (25.3ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:30:18 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 500 Internal Server Error in 95ms
+
+ActiveRecord::ConfigurationError (Association named 'end_user' was not found on Doodle; perhaps you misspelled it?):
+  app/controllers/api/doodles_controller.rb:67:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:30:32 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')
+Completed 200 OK in 106ms (Views: 84.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:30:49 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.6ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, end_user.id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')
+SQLite3::SQLException: no such column: end_user.id: SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, end_user.id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')
+Completed 500 Internal Server Error in 101ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: end_user.id: SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, end_user.id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')):
+  app/controllers/api/doodles_controller.rb:67:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (33.6ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:31:12 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, end_users.id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')
+Completed 200 OK in 114ms (Views: 81.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:32:04 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')
+Completed 200 OK in 51ms (Views: 24.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:32:17 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')
+Completed 200 OK in 43ms (Views: 16.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:32:41 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')
+Completed 200 OK in 43ms (Views: 20.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:33:12 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, tags.id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')
+Completed 200 OK in 43ms (Views: 19.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:33:22 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" INNER JOIN "end_users" ON "end_users"."id" = "doodles"."end_user_id" WHERE (doodles.id = '55')
+Completed 200 OK in 115ms (Views: 21.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:33:45 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')
+Completed 200 OK in 98ms (Views: 77.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:36:54 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 36ms
+
+RuntimeError (unsupported: NilClass):
+  app/controllers/api/doodles_controller.rb:69:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (94.0ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:37:16 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+Completed 200 OK in 39ms (Views: 16.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:38:13 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.7ms)[0m  [1mSELECT  FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+SQLite3::SQLException: near "FROM": syntax error: SELECT  FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')
+Completed 500 Internal Server Error in 30ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "FROM": syntax error: SELECT  FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')):
+  app/controllers/api/doodles_controller.rb:69:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (10.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:38:37 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT @sqlSelectQuery FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+Completed 500 Internal Server Error in 38ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"api/doodles", :id=>nil} missing required keys: [:id]):
+  app/models/doodle.rb:17:in `self_link'
+  app/models/doodle.rb:13:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:69:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:38:49 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+Completed 200 OK in 37ms (Views: 14.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:39:46 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+Completed 500 Internal Server Error in 103ms
+
+NoMethodError (undefined method `tags' for #<Doodle:0x007f83f1fc55b8>):
+  app/models/doodle.rb:14:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:69:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (71.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (99.0ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:39:55 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 10]]
+Completed 200 OK in 44ms (Views: 20.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:40:12 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 50ms
+
+NoMethodError (undefined method `user' for #<Doodle:0x007f83f2a8ddd8>):
+  app/models/doodle.rb:14:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:69:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (27.4ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:40:27 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+Completed 500 Internal Server Error in 38ms
+
+NoMethodError (undefined method `user' for #<Doodle:0x007f83f71b9770>):
+  app/models/doodle.rb:15:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:69:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:40:40 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+Completed 500 Internal Server Error in 100ms
+
+NoMethodError (undefined method `users' for #<Doodle:0x007f83f1f9ed00>):
+  app/models/doodle.rb:15:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:69:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.2ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:40:46 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.3ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 10]]
+Completed 200 OK in 37ms (Views: 16.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:42:11 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+Completed 500 Internal Server Error in 38ms
+
+ActiveModel::MissingAttributeError (missing attribute: tag_id):
+  app/models/doodle.rb:14:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:67:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (35.8ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:42:45 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 46ms (Views: 21.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:42:58 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id, tags.name FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 10]]
+Completed 200 OK in 48ms (Views: 21.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:43:09 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')
+Completed 500 Internal Server Error in 35ms
+
+ActiveModel::MissingAttributeError (missing attribute: tag_id):
+  app/models/doodle.rb:14:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:67:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (32.3ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:43:20 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" INNER JOIN "tags" ON "tags"."id" = "doodles"."tag_id" WHERE (doodles.id = '55')
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 43ms (Views: 18.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:43:48 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 10]]
+Completed 200 OK in 116ms (Views: 18.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:45:17 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 114ms (Views: 89.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:45:55 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 50]]
+Completed 200 OK in 37ms (Views: 15.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:46:17 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 50]]
+Completed 200 OK in 47ms (Views: 24.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:46:27 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 50]]
+  [1m[36mEndUser Load (0.1ms)[0m  [1mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."id" = ? LIMIT 1[0m  [["id", 30]]
+Completed 200 OK in 64ms (Views: 41.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:50:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.8ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 50]]
+  [1m[35mEndUser Load (0.8ms)[0m  SELECT  "end_users".* FROM "end_users" WHERE "end_users"."id" = ? LIMIT 1  [["id", 30]]
+Completed 500 Internal Server Error in 215ms
+
+NoMethodError (undefined method `api_show_end_user_path' for #<EndUser:0x007fa9c9372df8>):
+  app/models/end_user.rb:23:in `self_link'
+  app/models/end_user.rb:19:in `serializable_hash'
+  app/models/doodle.rb:14:in `serializable_hash'
+  app/controllers/api/doodles_controller.rb:67:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (95.1ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:51:05 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.8ms)[0m  SELECT doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 50]]
+  [1m[36mEndUser Load (0.6ms)[0m  [1mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."id" = ? LIMIT 1[0m  [["id", 30]]
+Completed 200 OK in 128ms (Views: 101.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:52:16 +0100
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT doodles.id, doodles.doodle_text, doodles.location_id, locations.lat, locations.lng, doodles.end_user_id, doodles.tag_id FROM "doodles" INNER JOIN "locations" ON "locations"."id" = "doodles"."location_id" WHERE (doodles.id = '55')[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 50]]
+  [1m[35mEndUser Load (0.1ms)[0m  SELECT  "end_users".* FROM "end_users" WHERE "end_users"."id" = ? LIMIT 1  [["id", 30]]
+Completed 200 OK in 114ms (Views: 90.5ms | ActiveRecord: 2.5ms)

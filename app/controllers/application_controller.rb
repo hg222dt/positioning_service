@@ -135,7 +135,6 @@ class ApplicationController < ActionController::Base
     if payload[0]["exp"] >= Time.now.to_i
       payload
     else
-
       #token expired
       # fundera över om du ska ha någon rturn för att säga att token har gått ut. Ev länk för att generera ny.
       false
