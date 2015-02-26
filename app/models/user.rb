@@ -1,6 +1,8 @@
 require 'securerandom'
 
 class User < ActiveRecord::Base
+	has_many :api_user_stat
+
 	before_create :generate_access_token
 
 	has_secure_password

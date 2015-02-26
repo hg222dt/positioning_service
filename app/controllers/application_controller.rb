@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
 
   # default parameters, maby put i config-file?
+
+
   OFFSET = 0
   LIMIT = 20
 
@@ -63,4 +65,43 @@ class ApplicationController < ActionController::Base
   	end
   end
 
+
+  def checkApiKey
+    if request.headers["apikey"].present?
+
+      api_key_header = request.headers['apikey'].split(' ').last
+
+      api_key = api_key_header.strip
+
+      authenticateApiKey(api_key)
+
+    else
+      render json: { error: 'Need to include the API key in header' }, status: :forbidden
+    end
+
+  end
+
+  def authenticateApiKey(a)
+    # Kolla av mot ditt user-register att api-nyckeln finns tillgänglig
+    # registrera ev inloggninen
+    @apiUsers = User.all
+
+    @apiKeyFound = false
+
+    @apiUser
+
+    @apiUsers.each do |apiUser|
+      if apiUser.authkey == a
+        @apiKeyFound = true
+        @apiUser = apiUser
+        ApiUserStat.new(user: @apiUser)
+      end
+    end
+
+    if @apiKeyFound == true
+      true
+    else
+      render json: { error: 'ApiKey is not correct' }, status: :bad_request
+    end
+  end
 end

@@ -2,8 +2,10 @@ module Api
 	class DoodlesController < ApplicationController
 		respond_to :json, :xml
 
+		before_action :checkApiKey
 		before_action :offset_params
 		before_action :coordinates_params
+
 
 	  def index
 
