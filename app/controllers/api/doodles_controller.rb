@@ -7,7 +7,14 @@ module Api
 
 	  def index
 
-	  	if params[:lat].present? and params[:long].present? and params[:range].present?
+	  	query_term_params
+
+	  	if @query
+
+	  		@doodle = Doodle.where("doodle_text LIKE ?", "%#{@query}%") 
+	  		respond_with :api, @doodle
+
+	  	elsif params[:lat].present? and params[:long].present? and params[:range].present?
 	  		
 		  	@location_origin = Location.new
 		  	@location_origin.lat = @lat
@@ -48,15 +55,23 @@ module Api
 	  end
 
 	  def show
-
-	  	@doodle = Doodle.find(params[:id]);
+		  @doodle = Doodle.find(params[:id]);
 	  	respond_with :api, @doodle
-
 	  end
 
 	  def getAllLocations
 	  	@locations = Location.all
 	  	respond_with :api, @locations
+	  end
+
+
+	  def update
+
+	  end
+
+
+	  def destroy
+
 	  end
 	  
 

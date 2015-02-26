@@ -44,6 +44,14 @@ class ApplicationController < ActionController::Base
   end
 
 
+  def query_term_params
+    if params[:q].present?
+      @query = params[:q].to_str
+    else
+      @query = nil
+    end
+  end
+
 
   def current_user
   	@current_user ||= User.find(session[:userid]) if session[:userid]
