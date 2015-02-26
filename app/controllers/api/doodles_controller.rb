@@ -88,8 +88,8 @@ module Api
 		  		end
 			end
 
-			# rescue => error
-			# 	render json: { message: 'Object not found'}, status: :bad_request 
+			rescue => error
+				render json: { message: 'Object not found'}, status: :bad_request 
 
 	  end
 
