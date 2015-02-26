@@ -41130,3 +41130,16 @@ Geokit is using the domain: localhost
   [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 50]]
   [1m[35mEndUser Load (0.1ms)[0m  SELECT  "end_users".* FROM "end_users" WHERE "end_users"."id" = ? LIMIT 1  [["id", 30]]
 Completed 200 OK in 114ms (Views: 90.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/doodles/55.json" for ::1 at 2015-02-27 00:56:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::DoodlesController#show as JSON
+  Parameters: {"id"=>"55", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.5ms)[0m  [1mSELECT "doodles".* FROM "doodles" WHERE (doodles.id = '55')[0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mLocation Load (2.0ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 50]]
+  [1m[35mEndUser Load (0.5ms)[0m  SELECT  "end_users".* FROM "end_users" WHERE "end_users"."id" = ? LIMIT 1  [["id", 30]]
+Completed 200 OK in 174ms (Views: 60.4ms | ActiveRecord: 6.5ms)
