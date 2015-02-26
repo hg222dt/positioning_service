@@ -38,22 +38,27 @@ module Api
 
 	  def create
 
-	  	@tag = Tag.where("name = ?", params[:tag_name]).first
+	  	if api_authenticate
 
-	  	if @tag == nil
-	  		@tag = Tag.new(name: params[:tag_name])
-	  	end
-	  		
-	  	@doodle = Doodle.new
-	  	@doodle.doodle_text = params[:doodle_text]
-	  	@doodle.end_user_id = params[:end_user_id]
-	  	@doodle.tag = @tag
-	  	@doodle.location = Location.new(lat: params[:lat], lng: params[:long])
-	  	@doodle.save
+		  	@tag = Tag.where("name = ?", params[:tag_name]).first
 
-	  	@doodleLocation = Doodle.joins(:location).last
+		  	if @tag == nil
+		  		@tag = Tag.new(name: params[:tag_name])
+		  	end
+		  		
+		  	@doodle = Doodle.new
+		  	@doodle.doodle_text = params[:doodle_text]
+		  	@doodle.end_user_id = params[:end_user_id]
+		  	@doodle.tag = @tag
+		  	@doodle.location = Location.new(lat: params[:lat], lng: params[:long])
+		  	@doodle.save
 
-	  	respond_with :api, @doodleLocation
+		  	# @doodleLocation = Doodle.joins(:location).last
+
+		  	respond_with :api, @doodle
+
+		  end
+
 	  end
 
 	  def show
@@ -68,12 +73,16 @@ module Api
 
 
 	  def update
+	  	if api_authenticate
 
+	  	end
 	  end
 
 
 	  def destroy
-
+	  	if api_authenticate
+	  		
+	  	end
 	  end
 	  
 

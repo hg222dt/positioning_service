@@ -55,6 +55,8 @@ Rails.application.routes.draw do
       get 'locations' => 'doodles#getAllLocations', as: :locations
 
       get 'tags' => 'tags#index', as: :tags
+
+      post 'api_auth' => 'end_users#api_auth', as: :api_auth
     
     end
 

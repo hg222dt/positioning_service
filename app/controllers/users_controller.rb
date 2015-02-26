@@ -70,8 +70,6 @@
 
   def revoke_key
 
-    #delete()
-
     deleteUserKey();
 
     redirect_to user_root_path

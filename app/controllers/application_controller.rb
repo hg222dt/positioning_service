@@ -104,4 +104,60 @@ class ApplicationController < ActionController::Base
       render json: { error: 'ApiKey is not correct' }, status: :bad_request
     end
   end
+
+
+  def checkUserAuth
+
+
+  end
+
+  # authenticates users for unsafe methods
+  def api_authenticate 
+    if request.headers["Authorization"].present?
+
+      # stripping down and decoding incoming authtoken
+      auth_header = request.headers['Authorization'].split(' ').last
+      @token_payload = decodeJWT auth_header.strip
+
+      if !@token_payload
+        render json: { error: 'The provided user auth token wasn´t correct' }, status: :bad_request 
+        false
+      else
+        true
+      end
+    else
+      render json: { error: 'Need to include the Authorization header for user auth token' }, status: :unauthorized # The header isn´t present
+      false
+    end
+  end
+
+    # When we get a call we have to decode it - Returns the payload if good otherwise false
+  def decodeJWT(authToken)
+    # returns the token
+    payload = JWT.decode(authToken, Rails.application.secrets.secret_key_base, "HS512")
+    # returns the payload
+    if payload[0]["exp"] >= Time.now.to_i
+      payload
+    else
+
+      #token expired
+      # fundera över om du ska ha någon rturn för att säga att token har gått ut. Ev länk för att generera ny.
+      false
+    end
+    # if tiken is wrong
+    rescue => error
+      nil
+  end
+
+  # This method is for encoding the JWT before sending it out
+  def encodeJWT(user, exp=2.hours.from_now)
+    # adding expires parameter to authtokens payload
+    payload = { user_id: user.id }
+    payload[:exp] = exp.to_i
+    
+    # Encode the payload whit the application secret, and a more advanced hash method (creates header with JWT gem)
+    JWT.encode( payload, Rails.application.secrets.secret_key_base, "HS512")
+    
+  end
+
 end
