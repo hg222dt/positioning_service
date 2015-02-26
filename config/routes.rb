@@ -57,6 +57,8 @@ Rails.application.routes.draw do
       get 'tags' => 'tags#index', as: :tags
 
       post 'api_auth' => 'end_users#api_auth', as: :api_auth
+
+      get 'doodles_by_tag/:tag_name' => 'doodles#doodles_by_tag', as: :doodles_by_tag
     
     end
 

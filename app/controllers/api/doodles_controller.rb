@@ -114,6 +114,18 @@ module Api
 	  end
 	  
 
+
+	  def doodles_by_tag
+	  	@tag = Tag.where("name = ?", params[:tag_name]).first
+
+	  	@doodles = Doodle.joins(:tag).where(:tags => {:name => @tag.name})
+
+			render json: { message: @doodles}, status: :ok 	  	
+
+	  end
+
+
+
 	  private
 
 	  # def doodle_post_params
