@@ -38733,3 +38733,515 @@ Geokit is using the domain: localhost
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
   [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 41]]
 Completed 400 Bad Request in 19ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-26 18:22:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hepp", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"hepp"}}
+Geokit is using the domain: localhost
+Filter chain halted as :api_authenticate rendered or redirected
+Completed 401 Unauthorized in 19ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-26 18:23:38 +0100
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hepp", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"hepp"}}
+Geokit is using the domain: localhost
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/application_controller.rb:84:in `authenticateApiKey'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (80.2ms)
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-26 18:24:23 +0100
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hepp", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"hepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEndUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "end_users" WHERE "end_users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 200 OK in 212ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-26 18:27:02 +0100
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hepp", "email"=>"hepp@hepp.se", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"hepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEndUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hepp@hepp.se' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "end_users" ("username", "email", "password_digest", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "hepp"], ["email", "hepp@hepp.se"], ["password_digest", "$2a$10$1UDTmGjmi2ElwM1Wtb9sQuStN8AZ.w.mdnBolL/siAY29cHTuBYOm"], ["bio_text", "hepp"], ["created_at", "2015-02-26 17:27:02.155939"], ["updated_at", "2015-02-26 17:27:02.155939"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 99ms
+
+NoMethodError (undefined method `api_end_user_url' for #<Api::EndUsersController:0x007fec3aa23388>):
+  app/controllers/api/end_users_controller.rb:25:in `create'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (66.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (91.9ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-26 18:31:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hepp", "email"=>"hepp@hepp.se", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"hepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mEndUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hepp@hepp.se' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 200 OK in 210ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-26 18:31:27 +0100
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hepp2", "email"=>"hepp2@hepp.se", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"hepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEndUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hepp2@hepp.se' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "end_users" ("username", "email", "password_digest", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "hepp2"], ["email", "hepp2@hepp.se"], ["password_digest", "$2a$10$caMyWpfiPjMnVGpAG2chIeIxrKIm4HmGl0ot4I/9OMfXovunGgQTC"], ["bio_text", "hepp"], ["created_at", "2015-02-26 17:31:27.604408"], ["updated_at", "2015-02-26 17:31:27.604408"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 200 OK in 91ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-26 18:32:08 +0100
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hepp3", "email"=>"hepp3@hepp.se", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"hepp"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEndUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hepp3@hepp.se' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "end_users" ("username", "email", "password_digest", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["username", "hepp3"], ["email", "hepp3@hepp.se"], ["password_digest", "$2a$10$Zpo96V0Ltqfxa7euubBbquueAkMUskKug.c4Kg8RRK9W7s2ZZ0qwq"], ["bio_text", "hepp"], ["created_at", "2015-02-26 17:32:09.024386"], ["updated_at", "2015-02-26 17:32:09.024386"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 111ms (Views: 0.4ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/api/user.json" for ::1 at 2015-02-26 18:33:01 +0100
+Processing by Api::EndUsersController#create as JSON
+  Parameters: {"end_user"=>{"username"=>"hepp4", "email"=>"hepp4@hepp.se", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio_text"=>"hepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mEndUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "end_users" WHERE "end_users"."email" = 'hepp4@hepp.se' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "end_users" ("username", "email", "password_digest", "bio_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "hepp4"], ["email", "hepp4@hepp.se"], ["password_digest", "$2a$10$qwsKteSHwNVtjF9tV0HdoO94RlWd7Nd0onTKRBX949WHLfoEJZR2i"], ["bio_text", "hepp"], ["created_at", "2015-02-26 17:33:01.790623"], ["updated_at", "2015-02-26 17:33:01.790623"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Completed 201 Created in 117ms (Views: 0.5ms | ActiveRecord: 3.6ms)
+
+
+Started PUT "/api/doodles/43.json" for ::1 at 2015-02-26 18:36:54 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"hejhejhejhej", "id"=>"43", "doodle"=>{"doodle_text"=>"hejhejhejhej"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.3ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 43]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "doodles" SET "doodle_text" = ?, "updated_at" = ? WHERE "doodles"."id" = ?  [["doodle_text", "hejhejhejhej"], ["updated_at", "2015-02-26 17:36:54.160658"], ["id", 43]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 39ms (Views: 0.5ms | ActiveRecord: 2.8ms)
+
+
+Started PUT "/api/doodles/43.json" for ::1 at 2015-02-26 18:37:23 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"43", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 400 Bad Request in 22ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 18:37:37 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.7ms)[0m  SELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0
+Completed 200 OK in 35ms (Views: 16.7ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/api/doodles/43.json" for ::1 at 2015-02-26 18:37:49 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"43", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:38:04 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:38:32 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 78ms
+
+NoMethodError (undefined method `user_id' for #<Array:0x007fc695e488e8>):
+  app/controllers/application_controller.rb:126:in `end_user_authenticate'
+  app/controllers/api/doodles_controller.rb:76:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (23.9ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:39:28 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 400 Bad Request in 16ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:39:57 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.2ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 38]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "doodles" SET "doodle_text" = ?, "updated_at" = ? WHERE "doodles"."id" = ?  [["doodle_text", "heppelihepp"], ["updated_at", "2015-02-26 17:39:57.566762"], ["id", 38]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 89ms (Views: 0.3ms | ActiveRecord: 3.6ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:42:57 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+Completed 400 Bad Request in 24ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:43:05 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 22ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/api/doodles_controller.rb:78:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (80.7ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:43:21 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 38]]
+Completed 403 Forbidden in 30ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:43:48 +0100
+
+SyntaxError (/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:78: syntax error, unexpected ']', expecting keyword_then or ';' or '\n'
+/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:114: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/api/doodles_controller.rb:78: syntax error, unexpected ']', expecting keyword_then or ';' or '\n'
+  app/controllers/api/doodles_controller.rb:114: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (30.9ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:44:44 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 38]]
+Completed 403 Forbidden in 27ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:46:05 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 400 Bad Request in 76ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/api_auth.json" for ::1 at 2015-02-26 18:47:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::EndUsersController#api_auth as JSON
+  Parameters: {"email"=>"hej@hej.se", "password"=>"[FILTERED]", "end_user"=>{"email"=>"hej@hej.se"}}
+Geokit is using the domain: localhost
+Filter chain halted as :checkApiKey rendered or redirected
+Completed 403 Forbidden in 19ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/api_auth.json" for ::1 at 2015-02-26 18:48:12 +0100
+Processing by Api::EndUsersController#api_auth as JSON
+  Parameters: {"email"=>"hej@hej.se", "password"=>"[FILTERED]", "end_user"=>{"email"=>"hej@hej.se"}}
+Geokit is using the domain: localhost
+  [1m[35mEndUser Load (0.6ms)[0m  SELECT  "end_users".* FROM "end_users" WHERE "end_users"."email" = ? LIMIT 1  [["email", "hej@hej.se"]]
+Completed 200 OK in 99ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:49:18 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.5ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 38]]
+Completed 403 Forbidden in 93ms (Views: 0.5ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:50:34 +0100
+
+SyntaxError (/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:81: syntax error, unexpected keyword_if, expecting ')'
+	  			if @token_payload[0]["user_id"] == Doodle.find(params[:id])
+	  			  ^):
+  app/controllers/api/doodles_controller.rb:81: syntax error, unexpected keyword_if, expecting ')'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (25.4ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:50:59 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.6ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", "38"]]
+Completed 403 Forbidden in 85ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:51:22 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 38]]
+Completed 500 Internal Server Error in 30ms
+
+NoMethodError (undefined method `user_id' for #<Doodle:0x007fa1b2bf0670>):
+  app/controllers/api/doodles_controller.rb:79:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:51:55 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 38]]
+Completed 500 Internal Server Error in 82ms
+
+NoMethodError (undefined method `user_id' for #<Doodle:0x007fa1b431a080>):
+  app/controllers/api/doodles_controller.rb:81:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (26.4ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:52:38 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", "38"]]
+Completed 403 Forbidden in 26ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-26 18:54:35 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-26 18:55:24 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 400 Bad Request in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/api_auth.json" for ::1 at 2015-02-26 18:55:58 +0100
+Processing by Api::EndUsersController#api_auth as JSON
+  Parameters: {"email"=>"hej@hej.se", "password"=>"[FILTERED]", "end_user"=>{"email"=>"hej@hej.se"}}
+Geokit is using the domain: localhost
+  [1m[36mEndUser Load (0.9ms)[0m  [1mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."email" = ? LIMIT 1[0m  [["email", "hej@hej.se"]]
+Completed 200 OK in 94ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/api/doodles/38.json" for ::1 at 2015-02-26 18:56:17 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"heppelihepp", "id"=>"38", "doodle"=>{"doodle_text"=>"heppelihepp"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", "38"]]
+Completed 403 Forbidden in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/doodles.json" for ::1 at 2015-02-26 18:56:40 +0100
+Processing by Api::DoodlesController#create as JSON
+  Parameters: {"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30", "lat"=>55.609613, "long"=>13.000892, "tag_name"=>"hepp", "doodle"=>{"doodle_text"=>"En doodle med rätt user_id", "end_user_id"=>"30"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT  "tags".* FROM "tags" WHERE (name = 'hepp')  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "locations" ("lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["lat", 55.609613], ["lng", 13.000892], ["created_at", "2015-02-26 17:56:40.411540"], ["updated_at", "2015-02-26 17:56:40.411540"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doodles" ("doodle_text", "end_user_id", "tag_id", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["doodle_text", "En doodle med rätt user_id"], ["end_user_id", 30], ["tag_id", 10], ["location_id", 37], ["created_at", "2015-02-26 17:56:40.414158"], ["updated_at", "2015-02-26 17:56:40.414158"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Completed 201 Created in 113ms (Views: 3.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/doodles.json" for ::1 at 2015-02-26 18:56:59 +0100
+Processing by Api::DoodlesController#index as JSON
+  Parameters: {"doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.4ms)[0m  SELECT  "doodles".* FROM "doodles"  ORDER BY "doodles"."created_at" DESC LIMIT 20 OFFSET 0
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/api/doodles/44.json" for ::1 at 2015-02-26 18:57:20 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"ändrar på en doodle med rätt user_id", "id"=>"44", "doodle"=>{"doodle_text"=>"ändrar på en doodle med rätt user_id"}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.1ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", "44"]]
+Completed 403 Forbidden in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/doodles/44.json" for ::1 at 2015-02-26 18:57:46 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"ändrar på en doodle med rätt user_id", "id"=>"44", "doodle"=>{"doodle_text"=>"ändrar på en doodle med rätt user_id"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 44]]
+Completed 500 Internal Server Error in 27ms
+
+NoMethodError (undefined method `end_user_id' for "44":String):
+  app/controllers/api/doodles_controller.rb:83:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (26.4ms)
+
+
+Started PUT "/api/doodles/44.json" for ::1 at 2015-02-26 18:58:22 +0100
+
+SyntaxError (/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:81: syntax error, unexpected tIVAR, expecting keyword_end
+	  			@user_id_doodle @doodle.end_user_id
+	  			                       ^
+/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:83: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:121: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/api/doodles_controller.rb:81: syntax error, unexpected tIVAR, expecting keyword_end
+  app/controllers/api/doodles_controller.rb:83: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/controllers/api/doodles_controller.rb:121: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (60.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (90.1ms)
+
+
+Started PUT "/api/doodles/44.json" for ::1 at 2015-02-26 18:58:48 +0100
+
+SyntaxError (/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:83: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+/Users/henrikgudmundsson/Google Drive/Linneuniversitetet/webbramverk/repo_labb/positioning_service/app/controllers/api/doodles_controller.rb:121: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/api/doodles_controller.rb:83: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/controllers/api/doodles_controller.rb:121: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (29.6ms)
+
+
+Started PUT "/api/doodles/44.json" for ::1 at 2015-02-26 18:59:13 +0100
+Processing by Api::DoodlesController#update as JSON
+  Parameters: {"doodle_text"=>"ändrar på en doodle med rätt user_id", "id"=>"44", "doodle"=>{"doodle_text"=>"ändrar på en doodle med rätt user_id"}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.2ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", "44"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "doodles" SET "doodle_text" = ?, "updated_at" = ? WHERE "doodles"."id" = ?  [["doodle_text", "ändrar på en doodle med rätt user_id"], ["updated_at", "2015-02-26 17:59:14.014292"], ["id", 44]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 36ms (Views: 0.7ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/api/doodles/44.json" for ::1 at 2015-02-26 19:02:02 +0100
+Processing by Api::DoodlesController#destroy as JSON
+  Parameters: {"id"=>"44", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 44]]
+Completed 403 Forbidden in 26ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/api/doodles/44.json" for ::1 at 2015-02-26 19:02:20 +0100
+Processing by Api::DoodlesController#destroy as JSON
+  Parameters: {"id"=>"44", "doodle"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mDoodle Load (0.1ms)[0m  [1mSELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1[0m  [["id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE "doodles"."id" = ? LIMIT 1  [["id", "44"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "doodles" WHERE "doodles"."id" = ?  [["id", 44]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 84ms (Views: 0.4ms | ActiveRecord: 3.2ms)

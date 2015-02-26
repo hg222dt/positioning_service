@@ -38,7 +38,7 @@ module Api
 
 	  def create
 
-	  	if api_authenticate
+	  	if end_user_authenticate
 
 		  	@tag = Tag.where("name = ?", params[:tag_name]).first
 
@@ -73,22 +73,40 @@ module Api
 
 
 	  def update
-	  	if api_authenticate
+	  	if end_user_authenticate
 
-		  		@doodle = Doodle.update(params[:id], doodle_text: params[:doodle_text])
-	  			render json: { message: 'Object seccessfully updated' }, status: :ok # The header isn´t present
+	  			@doodle = Doodle.find(params[:id])
+
+	  			@user_id_doodle = @doodle.end_user_id
+
+	  			if @token_payload[0]["user_id"] == @user_id_doodle
+
+			  		@doodle = Doodle.update(params[:id], doodle_text: params[:doodle_text])
+		  			render json: { message: 'Object successfully updated' }, status: :ok 
+		  		else
+		  			render json: { message: 'Not authorized' }, status: :forbidden
+		  		end
 			end
 
-			rescue => error
-				render json: { message: 'Object not found'}, status: :bad_request 
+			# rescue => error
+			# 	render json: { message: 'Object not found'}, status: :bad_request 
 
 	  end
 
 
 	  def destroy
-	  	if api_authenticate
-	  		Doodle.destroy(params[:id])
-	  		render json: { message: 'Object seccessfully removed' }, status: :ok # The header isn´t present
+	  	if end_user_authenticate
+
+	  			@doodle = Doodle.find(params[:id])
+
+	  			@user_id_doodle = @doodle.end_user_id
+
+	  			if @token_payload[0]["user_id"] == @user_id_doodle
+			  		Doodle.destroy(params[:id])
+			  		render json: { message: 'Object seccessfully removed' }, status: :ok			  	
+			  	else
+			  		render json: { message: 'Not authorized' }, status: :forbidden
+			  	end
 	  	end
 
   		rescue => error

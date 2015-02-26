@@ -112,7 +112,7 @@ class ApplicationController < ActionController::Base
   end
 
   # authenticates users for unsafe methods
-  def api_authenticate 
+  def end_user_authenticate 
     if request.headers["Authorization"].present?
 
       # stripping down and decoding incoming authtoken
@@ -123,6 +123,7 @@ class ApplicationController < ActionController::Base
         render json: { error: 'The provided user auth token wasn´t correct' }, status: :bad_request 
         false
       else
+        # puts @token_payload[0]["user_id"]
         true
       end
     else

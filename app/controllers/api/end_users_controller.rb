@@ -4,7 +4,7 @@ module Api
 		respond_to :json, :xml
 
 		before_action :offset_params
-		before_action :api_authenticate
+		# before_action :checkApiKey
 
 		def getUsersDoodles
 
@@ -21,14 +21,12 @@ module Api
 			@end_user = EndUser.new(end_user_params);
 
 
-
 			if @end_user.save
-		    respond_with :api, @end_user
+		    # respond_with :api, @end_user
+		    render json: {message: @end_user}, status: :created
 			else
-				#Skicka tillbaka felmeddelande?
-
+				render json: {error: "Internal Error. User could not be added to database"}, status: 500
 			end
-
 		end
 
 		def index
@@ -37,7 +35,7 @@ module Api
 		end
 
 
-		def api_auth 
+		def api_auth
      
 	    end_user = EndUser.find_by(email: params[:email].downcase)
 	    if end_user && end_user.authenticate(params[:password])
