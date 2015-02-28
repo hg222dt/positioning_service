@@ -6,6 +6,7 @@ module Api
 		before_action :offset_params 
 		before_action :checkApiKey
 
+		# Getting a specific users doodles
 		def getUsersDoodles
 
 			@doodles = Doodle.where("end_user_id = ?", params[:end_user_id]).order(:created_at).all.limit(@limit).offset(@offset)

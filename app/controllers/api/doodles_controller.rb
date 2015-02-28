@@ -80,6 +80,7 @@ module Api
 
 	  			@user_id_doodle = @doodle.end_user_id
 
+	  			# Checking if doodles user-id is corresponding requesting users jwt
 	  			if @token_payload[0]["user_id"] == @user_id_doodle
 
 			  		@doodle = Doodle.update(params[:id], doodle_text: params[:doodle_text])
@@ -102,6 +103,7 @@ module Api
 
 	  			@user_id_doodle = @doodle.end_user_id
 
+	  			# Checking if doodles user-id is corresponding requesting users jwt
 	  			if @token_payload[0]["user_id"] == @user_id_doodle
 			  		Doodle.destroy(params[:id])
 			  		render json: { message: 'Object seccessfully removed' }, status: :ok			  	
@@ -116,6 +118,7 @@ module Api
 	  
 
 
+	  # Getting doodles by tag name
 	  def doodles_by_tag
 
 	  	@tag = Tag.where("name = ?", params[:tag_name]).first
@@ -125,16 +128,13 @@ module Api
 			render json: { message: @doodles}, status: :ok 	  	
 
 			rescue
-					# Using a custom error class for handling all my errors
-	      @error = ErrorMessage.new("Could not find that resource. Are you using the right id?", "The requested item was not found!" )
-	      # See documentation for diffrent status codes
+	      @error = ErrorMessage.new("Could not find that resource. Are you using the right resource identification", "The requested item was not found!" )
 	      respond_with  @error, status: :not_found
-
 	  end
 
 	end
 
-
+	# Createing error message
 	class ErrorMessage
 	  
 	  def initialize(message_developer, message_user)
