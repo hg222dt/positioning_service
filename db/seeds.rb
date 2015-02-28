@@ -15,17 +15,20 @@ Location.delete_all
 Tag.delete_all
 
 u1 = User.create(email: "admin@admin.se", password: "hejhej", password_confirmation: "hejhej", webbsite_url: "www.hejhej.se", website_name: "hejhej-siten", is_user_admin: true)
+u2 = User.create(email: "clientUser@user.se", password: "hejhej", password_confirmation: "hejhej", webbsite_url: "www.hejhej.se", website_name: "hejhej-siten", is_user_admin: false)
 
-EndUser.create(email: "hej@hej.se", password: "hejhej", password_confirmation: "hejhej", username: "hejhej", bio_text: "hejhej bio text")
-EndUser.create(email: "hej2@hej.se", password: "hejhej", password_confirmation: "hejhej", username: "hejhej2", bio_text: "hejhej bio text")
 
-d = Doodle.create(doodle_text: "Malmö Doodle")
-l = Location.create(lat: 55.609613, lng: 13.000892)
+EndUser.create(email: "user1@user.se", password: "hejhej", password_confirmation: "hejhej", username: "hejhej", bio_text: "hejhej bio text")
+EndUser.create(email: "user2@user.se", password: "hejhej", password_confirmation: "hejhej", username: "hejhej2", bio_text: "hejhej bio text")
+
+
+d = Doodle.create(doodle_text: "En doodle i Berlin")
+l = Location.create(lat: 52.518825, lng: 13.396297)
 d.location_id = l.id
 EndUser.first.doodles << d
 
-d = Doodle.create(doodle_text: "Düsseldorf doodle")
-l = Location.create(lat: 51.234842, lng: 6.779505)
+d = Doodle.create(doodle_text: "En doodle i Paris")
+l = Location.create(lat: 48.857165, lng: 2.347060)
 d.location_id = l.id
 EndUser.last.doodles << d
 
@@ -33,5 +36,5 @@ EndUser.last.doodles << d
 
 Tag.create(name: "working")
 Tag.create(name: "hangin out")
-Tag.create(name: "strowling")
+Tag.create(name: "beeing important")
 Tag.create(name: "saving the world")

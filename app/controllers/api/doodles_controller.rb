@@ -7,6 +7,7 @@ module Api
 		before_action :coordinates_params
 
 
+
 	  def index
 
 	  	query_term_params
@@ -123,19 +124,30 @@ module Api
 
 			render json: { message: @doodles}, status: :ok 	  	
 
+			rescue
+					# Using a custom error class for handling all my errors
+	      @error = ErrorMessage.new("Could not find that resource. Are you using the right id?", "The requested item was not found!" )
+	      # See documentation for diffrent status codes
+	      respond_with  @error, status: :not_found
+
 	  end
 
-
-
-	  private
-
-	  # def doodle_post_params
-			# params.require(:doodle).permit(:doodle_text, :poster_user_id)
-	  # end
-
-	  # def get_posted_coordinates
-	  # 	params.require(:doodle).permit(:lat, :long)
-	  # end
-
 	end
+
+
+	class ErrorMessage
+	  
+	  def initialize(message_developer, message_user)
+	    @messageDeveloper = message_developer
+	    @messageUser = message_user
+	  end
+	  
+	  def to_xml(options={})
+	    str = "<error>"
+	    str += "  <developerMessage>#{@messageDeveloper}</developerMessage>"
+	    str += "  <userMessage>#{@messageUser}</userMessage>"
+	    str += "</error>"
+	  end
+	end
+
 end
