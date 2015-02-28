@@ -40,24 +40,23 @@ module Api
 
 	  	if end_user_authenticate
 
-		  	@tag = Tag.where("name = ?", params[:tag_name]).first
+			  	@tag = Tag.where("name = ?", params[:tag_name]).first
 
-		  	if @tag == nil
-		  		@tag = Tag.new(name: params[:tag_name])
-		  	end
-		  		
-		  	@location = Location.new(lat: params[:lat], lng: params[:long])
-		  	@location.save
+			  	if @tag == nil
+			  		@tag = Tag.new(name: params[:tag_name])
+			  	end
+			  		
+			  	@location = Location.new(lat: params[:lat], lng: params[:long])
+			  	@location.save
 
-		  	@doodle = Doodle.new
-		  	@doodle.doodle_text = params[:doodle_text]
-		  	@doodle.end_user_id = params[:end_user_id]
-		  	@doodle.tag = @tag
-		  	@doodle.location = @location
-		  	@doodle.save
+			  	@doodle = Doodle.new
+			  	@doodle.doodle_text = params[:doodle_text]
+			  	@doodle.end_user_id = @token_payload[0]["user_id"]
+			  	@doodle.tag = @tag
+			  	@doodle.location = @location
+			  	@doodle.save
 
-		  	respond_with :api, @doodle
-
+			  	respond_with :api, @doodle
 		  end
 
 	  end

@@ -8,7 +8,7 @@ module Api
 
 		def getUsersDoodles
 
-			@doodles = Doodle.select("*").joins(:location).where("end_user_id = ?", params[:end_user_id]).order(:created_at).all.limit(@limit).offset(@offset)
+			@doodles = Doodle.where("end_user_id = ?", params[:end_user_id]).order(:created_at).all.limit(@limit).offset(@offset)
 
 			respond_with :api, @doodles
 
@@ -16,11 +16,11 @@ module Api
 
 		def create
 
-			@end_user = EndUser.new(end_user_params);
+			@end_user = EndUser.new(end_user_params)
 
 
 			if @end_user.save
-		    render json: {message: @end_user, user_url: }, status: :created
+		    render json: {message: @end_user }, status: :created
 			else
 				render json: {error: "Internal Error. User could not be added to database"}, status: 500
 			end
@@ -54,9 +54,5 @@ module Api
 	  	@user = EndUser.find(:id)
 	  	respond_with :api, @user
 	  end
-
-   
-
-
 	end
 end

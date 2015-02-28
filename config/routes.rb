@@ -41,27 +41,29 @@ Rails.application.routes.draw do
 
 
     namespace :api, path: '/api' do
+      scope "/v1" do
 
-      resources :doodles do
-        resources :end_users
+        resources :doodles do
+          resources :end_users
+        end
+
+        get 'user/:end_user_id/doodles' => 'end_users#getUsersDoodles', as: :user_doodles
+        
+        get 'users' => 'end_users#index', as: :users_index
+
+        post 'user' => 'end_users#create', as: :user_create
+
+        get 'locations' => 'doodles#getAllLocations', as: :locations
+
+        get 'tags' => 'tags#index', as: :tags
+
+        post 'api_auth' => 'end_users#api_auth', as: :api_auth
+
+        get 'doodles_by_tag/:tag_name' => 'doodles#doodles_by_tag', as: :doodles_by_tag
+
+        get 'users/:id' => 'end_users#show', as: :show_end_user
+
       end
-
-      get 'user/:end_user_id/doodles' => 'end_users#getUsersDoodles', as: :user_doodles
-      
-      get 'users' => 'end_users#index', as: :users_index
-
-      post 'user' => 'end_users#create', as: :user_create
-
-      get 'locations' => 'doodles#getAllLocations', as: :locations
-
-      get 'tags' => 'tags#index', as: :tags
-
-      post 'api_auth' => 'end_users#api_auth', as: :api_auth
-
-      get 'doodles_by_tag/:tag_name' => 'doodles#doodles_by_tag', as: :doodles_by_tag
-
-      get 'users/:id' => 'end_users#show', as: :show_end_user
-    
     end
 
 
