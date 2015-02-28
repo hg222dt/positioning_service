@@ -44417,3 +44417,40 @@ Geokit is using the domain: localhost
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
   [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE (name = 'cooltafg')  ORDER BY "tags"."id" ASC LIMIT 1[0m
 Completed 404 Not Found in 31ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/tags.json" for ::1 at 2015-02-28 14:03:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::TagsController#index as JSON
+  Parameters: {"tag"=>{}}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+Filter chain halted as :checkApiKey rendered or redirected
+Completed 400 Bad Request in 98ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/tags.json" for ::1 at 2015-02-28 14:03:28 +0100
+Processing by Api::TagsController#index as JSON
+  Parameters: {"tag"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT  "tags".* FROM "tags" LIMIT 20 OFFSET 0
+Completed 200 OK in 49ms (Views: 12.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/user/40/doodles.json" for ::1 at 2015-02-28 14:04:00 +0100
+Processing by Api::EndUsersController#getUsersDoodles as JSON
+  Parameters: {"end_user_id"=>"40", "end_user"=>{}}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mDoodle Load (0.7ms)[0m  SELECT  "doodles".* FROM "doodles" WHERE (end_user_id = '40')  ORDER BY "doodles"."created_at" ASC LIMIT 20 OFFSET 0
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mLocation Load (0.4ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 59]]
+  [1m[36mEndUser Load (0.5ms)[0m  [1mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 60]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "end_users".* FROM "end_users" WHERE "end_users"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 61]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "end_users".* FROM "end_users" WHERE "end_users"."id" = ? LIMIT 1[0m  [["id", 40]]
+Completed 200 OK in 134ms (Views: 112.9ms | ActiveRecord: 3.4ms)
