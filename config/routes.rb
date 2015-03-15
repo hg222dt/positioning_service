@@ -65,7 +65,7 @@ Rails.application.routes.draw do
 
 
 
-        get 'users/:end_user_username/doodles' => 'end_users#getDoodlesByUsername', as: :show_doodles_username
+        get 'users/username/:end_user_username/doodles' => 'end_users#getDoodlesByUsername', as: :show_doodles_username
 
       end
     end

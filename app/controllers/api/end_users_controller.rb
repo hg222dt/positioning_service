@@ -18,7 +18,9 @@ module Api
 		# Getting a specific users doodles
 		def getDoodlesByUsername
 
-			@doodles = Doodle.where("end_user_username = ?", params[:end_user_username]).order(:created_at).all.limit(@limit).offset(@offset)
+			@end_user = EndUser.where("username = ?", params[:end_user_username]).first;
+
+			@doodles = Doodle.where("end_user_id = ?", @end_user.id).order(:created_at).all.limit(@limit).offset(@offset)
 
 			respond_with :api, @doodles
 
