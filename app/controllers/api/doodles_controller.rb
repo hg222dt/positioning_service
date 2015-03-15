@@ -125,7 +125,9 @@ module Api
 
 	  	@doodles = Doodle.joins(:tag).where(:tags => {:name => @tag.name})
 
-			render json: { message: @doodles}, status: :ok 	  	
+
+			# render json: { message: @doodles}, status: :ok 	  
+			respond_with :api, @doodles	
 
 			rescue
 	      @error = ErrorMessage.new("Could not find that resource. Are you using the right resource identification", "The requested item was not found!" )

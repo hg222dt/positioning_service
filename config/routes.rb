@@ -63,6 +63,10 @@ Rails.application.routes.draw do
 
         get 'users/:id' => 'end_users#show', as: :show_end_user
 
+
+
+        get 'users/:end_user_username/doodles' => 'end_users#getDoodlesByUsername', as: :show_doodles_username
+
       end
     end
 

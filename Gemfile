@@ -36,6 +36,8 @@ gem 'geokit-rails', github: 'geokit/geokit-rails'
 
 gem 'jwt'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

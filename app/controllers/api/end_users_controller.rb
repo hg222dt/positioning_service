@@ -15,6 +15,15 @@ module Api
 
 		end
 
+		# Getting a specific users doodles
+		def getDoodlesByUsername
+
+			@doodles = Doodle.where("end_user_username = ?", params[:end_user_username]).order(:created_at).all.limit(@limit).offset(@offset)
+
+			respond_with :api, @doodles
+
+		end
+
 		def create
 
 			@end_user = EndUser.new(end_user_params)
