@@ -34,15 +34,6 @@ module Api
 
 			@test_email = EndUser.find_by(email: params[:end_user][:email])
 
-
-			puts "loggning"
-			puts params[:end_user][:email]
-			puts params[:email]
-			params[:username]
-			# puts @test_username
-			# puts @test_email
-			puts "loggning"
-
 			if @test_username
 
 				render json: {error: "Username is allready taken", error_message_id: 1}, status: 400
