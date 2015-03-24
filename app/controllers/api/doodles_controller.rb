@@ -106,7 +106,7 @@ module Api
 	  			# Checking if doodles user-id is corresponding requesting users jwt
 	  			if @token_payload[0]["user_id"] == @user_id_doodle
 			  		Doodle.destroy(params[:id])
-			  		render json: { message: 'Object seccessfully removed' }, status: :ok			  	
+			  		render json: { message: 'Object seccessfully removed', doodle_id: params[:id]}, status: :ok			  	
 			  	else
 			  		render json: { message: 'Not authorized' }, status: :forbidden
 			  	end

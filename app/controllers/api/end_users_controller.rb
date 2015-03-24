@@ -30,12 +30,36 @@ module Api
 
 			@end_user = EndUser.new(end_user_params)
 
+			@test_username = EndUser.where("username = ?", params[:end_user][:username]).first
 
-			if @end_user.save
-		    render json: {message: @end_user }, status: :created
+			@test_email = EndUser.find_by(email: params[:end_user][:email])
+
+
+			puts "loggning"
+			puts params[:end_user][:email]
+			puts params[:email]
+			params[:username]
+			# puts @test_username
+			# puts @test_email
+			puts "loggning"
+
+			if @test_username
+
+				render json: {error: "Username is allready taken", error_message_id: 1}, status: 400
+			
+			elsif @test_email
+			
+				render json: {error: "Email is allready taken", error_message_id: 2}, status: 400
+			
 			else
-				render json: {error: "Internal Error. User could not be added to database"}, status: 500
+
+				if @end_user.save
+			    render json: {message: @end_user }, status: :created
+				else
+					render json: {error: "Internal Error. User could not be added to database"}, status: 500
+				end
 			end
+
 		end
 
 		def index
@@ -49,9 +73,13 @@ module Api
 	    end_user = EndUser.find_by(email: params[:email].downcase)
 	    if end_user && end_user.authenticate(params[:password])
 	      
-	      render json: { auth_token: encodeJWT(end_user) }
+	      render json: { auth_token: encodeJWT(end_user), end_user: end_user }
+
+	      # @response = {:user => end_user, :token => encodeJWT(end_user)}
+
+	      # respond_with :api, @response
 	    else
-	      render json: { error: 'Invalid username or password' }, status: :unauthorized
+	      render json: { error: 'Invalid username or password', user_message_id: 1 }, status: :unauthorized
 	    end
 
 	  end
